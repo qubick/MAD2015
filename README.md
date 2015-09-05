@@ -4,7 +4,7 @@ MAD2015, ATLAS Institute,
 University of Colorado Boulder
 
 ## Platform 
-iOS/Android mobile application development
+iOS/Android mobile application
 ## Language
 Swift/Java
 ## Development
