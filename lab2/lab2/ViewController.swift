@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var imgControl: UISegmentedControl!
-    
     @IBAction func ChangeInfo(sender: UISegmentedControl) {
         
         if imgControl.selectedSegmentIndex == 0{
@@ -29,8 +28,8 @@ class ViewController: UIViewController {
             titleLabel.text = "Can this happen?"
         }
     }
-    @IBOutlet weak var imgControl2: UISegmentedControl!
     
+    @IBOutlet weak var imgControl2: UISegmentedControl!
     @IBAction func ChangeInfo2(sender: AnyObject) {
         if imgControl2.selectedSegmentIndex == 0 {
             titleLabel.text = "Just sitting.."
@@ -40,11 +39,15 @@ class ViewController: UIViewController {
             titleLabel.text = "Now kissing!"
             coupleImg.image = UIImage(named: "couple2.png")
         }
-            
         else {
             titleLabel.text = "Can this happen?"
         }
 
+    }
+    
+    @IBOutlet weak var capitalSwitch: UISwitch!
+    @IBAction func updateFont(sender: UISwitch) {
+        
     }
     
     override func viewDidLoad() {

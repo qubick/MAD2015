@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="her" translatesAutoresizingMaskIntoConstraints="NO" id="BqA-rG-kvL">
-                                <rect key="frame" x="89" y="52" width="181" height="219"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.64999999999999969" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kissing Couple Automata" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVC-U4-Leq">
                                 <rect key="frame" x="79" y="295" width="201" height="21"/>
                                 <color key="backgroundColor" red="0.99359709594941781" green="1" blue="0.039349953191636033" alpha="1" colorSpace="calibratedRGB"/>
@@ -26,7 +23,7 @@
                                 <color key="textColor" red="0.21306423965545862" green="0.46635269302058457" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CDB-FT-4tX">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="CDB-FT-4tX">
                                 <rect key="frame" x="100" y="341" width="159" height="29"/>
                                 <segments>
                                     <segment title="Her"/>
@@ -46,10 +43,26 @@
                                     <action selector="ChangeInfo2:" destination="vXZ-lx-hvc" eventType="valueChanged" id="DTN-ex-Wwm"/>
                                 </connections>
                             </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qiV-4r-5pa">
+                                <rect key="frame" x="210" y="428" width="51" height="31"/>
+                                <connections>
+                                    <action selector="updateFont:" destination="vXZ-lx-hvc" eventType="valueChanged" id="vcw-vc-RRb"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Capitalization" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrJ-2V-hK4">
+                                <rect key="frame" x="79" y="433" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="couple1" translatesAutoresizingMaskIntoConstraints="NO" id="BqA-rG-kvL">
+                                <rect key="frame" x="89" y="51" width="181" height="219"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="capitalSwitch" destination="qiV-4r-5pa" id="Hfs-PA-w5T"/>
                         <outlet property="coupleImg" destination="BqA-rG-kvL" id="bvE-Pr-FEe"/>
                         <outlet property="imgControl" destination="CDB-FT-4tX" id="VKZ-si-swP"/>
                         <outlet property="imgControl2" destination="w2M-L7-w2n" id="G3Z-kl-osk"/>
@@ -61,6 +74,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="her" width="148" height="206"/>
+        <image name="couple1" width="143" height="202"/>
     </resources>
 </document>
