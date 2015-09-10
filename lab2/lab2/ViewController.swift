@@ -13,9 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var coupleImg: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var imgControl: UISegmentedControl!
-    @IBAction func ChangeInfo(sender: UISegmentedControl) {
-        
+    func updateImage1(){
         if imgControl.selectedSegmentIndex == 0{
             titleLabel.text = "See through her body"
             coupleImg.image = UIImage(named: "her.png")
@@ -28,9 +26,13 @@ class ViewController: UIViewController {
             titleLabel.text = "Can this happen?"
         }
     }
+    @IBOutlet weak var imgControl: UISegmentedControl!
+    @IBAction func ChangeInfo(sender: UISegmentedControl) {
+        updateImage1()
+        updateCaps()
+    }
     
-    @IBOutlet weak var imgControl2: UISegmentedControl!
-    @IBAction func ChangeInfo2(sender: AnyObject) {
+    func updateImage2(){
         if imgControl2.selectedSegmentIndex == 0 {
             titleLabel.text = "Just sitting.."
             coupleImg.image = UIImage(named: "couple1.png")
@@ -42,12 +44,33 @@ class ViewController: UIViewController {
         else {
             titleLabel.text = "Can this happen?"
         }
-
+    }
+    @IBOutlet weak var imgControl2: UISegmentedControl!
+    @IBAction func ChangeInfo2(sender: AnyObject) {
+        updateImage2()
+        updateCaps()
+    }
+    
+    func updateCaps(){
+        if capitalSwitch.on{
+            titleLabel.text = titleLabel.text?.uppercaseString
+        } else {
+            titleLabel.text = titleLabel.text?.lowercaseString
+        }
     }
     
     @IBOutlet weak var capitalSwitch: UISwitch!
     @IBAction func updateFont(sender: UISwitch) {
-        
+        updateCaps()
+    }
+    
+    
+    @IBOutlet weak var fontSizeLabel: UILabel!
+    @IBAction func changeFontSize(sender: UISlider) {
+        let fontSize = sender.value
+        fontSizeLabel.text = String(format: "$.0f", fontSize)
+        let fontSizeCGFloat = CGFloat(fontSize)
+        titleLabel.font = UIFont.systemFontOfSize(fontSizeCGFloat)
     }
     
     override func viewDidLoad() {
