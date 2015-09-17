@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="btk-H3-1Jn"/>
+                        <viewControllerLayoutGuide type="bottom" id="xBg-GB-Gn1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="couple1" translatesAutoresizingMaskIntoConstraints="NO" id="BqA-rG-kvL">
+                                <rect key="frame" x="209" y="45" width="181" height="219"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="219" id="c0M-FD-4A1"/>
+                                    <constraint firstAttribute="width" constant="181" id="f0S-eX-HJZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.64999999999999969" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kissing Couple Automata" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVC-U4-Leq">
+                                <rect key="frame" x="150" y="289" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FVn-YD-QOK"/>
+                                    <constraint firstAttribute="height" constant="21" id="tkN-5J-jo2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="1" green="0.63946813922154255" blue="0.24119934328286918" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w2M-L7-w2n">
+                                <rect key="frame" x="238" y="384" width="123" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="C9y-4U-gvo"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Kissing"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.3666867781" blue="0.14215535309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="ChangeInfo2:" destination="vXZ-lx-hvc" eventType="valueChanged" id="DTN-ex-Wwm"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capitalization" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrJ-2V-hK4">
+                                <rect key="frame" x="189" y="438" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wC9-wc-Thf">
+                                <rect key="frame" x="290" y="489" width="118" height="31"/>
+                                <color key="tintColor" red="1" green="0.88430052494259381" blue="0.1192130357930633" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="Iyh-od-srz"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeFontSize:" destination="vXZ-lx-hvc" eventType="valueChanged" id="4Yc-4l-sH5"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="CDB-FT-4tX">
+                                <rect key="frame" x="220" y="341" width="159" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="4hF-3I-7db"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Her"/>
+                                    <segment title="Him"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.69313506059999996" blue="0.019491704169999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="ChangeInfo:" destination="vXZ-lx-hvc" eventType="valueChanged" id="YIP-Bd-ZpY"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="16" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIM-b3-YXu">
+                                <rect key="frame" x="248" y="493" width="20" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qiV-4r-5pa">
+                                <rect key="frame" x="317" y="433" width="51" height="31"/>
+                                <color key="tintColor" red="0.9935970959" green="1" blue="0.039349953190000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="updateFont:" destination="vXZ-lx-hvc" eventType="valueChanged" id="vcw-vc-RRb"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JVC-U4-Leq" firstAttribute="top" secondItem="BqA-rG-kvL" secondAttribute="bottom" constant="25" id="4Uo-OL-RZr"/>
+                            <constraint firstItem="BqA-rG-kvL" firstAttribute="centerX" secondItem="JVC-U4-Leq" secondAttribute="centerX" id="6pt-aT-Sw5"/>
+                            <constraint firstItem="BqA-rG-kvL" firstAttribute="top" secondItem="btk-H3-1Jn" secondAttribute="bottom" constant="25" id="8bK-vm-19J"/>
+                            <constraint firstItem="CDB-FT-4tX" firstAttribute="top" secondItem="JVC-U4-Leq" secondAttribute="bottom" constant="31" id="GqI-Rh-zEr"/>
+                            <constraint firstItem="qiV-4r-5pa" firstAttribute="centerY" secondItem="zrJ-2V-hK4" secondAttribute="centerY" id="HF0-Vm-gqg"/>
+                            <constraint firstItem="BqA-rG-kvL" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="JKc-CS-AHz"/>
+                            <constraint firstItem="w2M-L7-w2n" firstAttribute="top" secondItem="CDB-FT-4tX" secondAttribute="bottom" constant="15" id="clf-3I-prQ"/>
+                            <constraint firstItem="BqA-rG-kvL" firstAttribute="centerX" secondItem="CDB-FT-4tX" secondAttribute="centerX" id="ilj-Zh-24w"/>
+                            <constraint firstItem="qiV-4r-5pa" firstAttribute="top" secondItem="w2M-L7-w2n" secondAttribute="bottom" constant="21" id="jPD-vL-OPN"/>
+                            <constraint firstItem="zrJ-2V-hK4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="173" id="k8e-wa-6eR"/>
+                            <constraint firstItem="qiV-4r-5pa" firstAttribute="centerY" secondItem="zrJ-2V-hK4" secondAttribute="centerY" id="oVo-y2-ymV"/>
+                            <constraint firstItem="qiV-4r-5pa" firstAttribute="leading" secondItem="zrJ-2V-hK4" secondAttribute="trailing" constant="24" id="pHk-5c-Txw"/>
+                            <constraint firstItem="rIM-b3-YXu" firstAttribute="centerY" secondItem="wC9-wc-Thf" secondAttribute="centerY" id="paJ-tG-OYE"/>
+                            <constraint firstItem="zrJ-2V-hK4" firstAttribute="top" secondItem="w2M-L7-w2n" secondAttribute="bottom" constant="26" id="qHM-pf-ySO"/>
+                            <constraint firstItem="wC9-wc-Thf" firstAttribute="leading" secondItem="rIM-b3-YXu" secondAttribute="trailing" constant="24" id="uB9-dp-xNd"/>
+                            <constraint firstItem="BqA-rG-kvL" firstAttribute="centerX" secondItem="w2M-L7-w2n" secondAttribute="centerX" id="v7q-ry-vBp"/>
+                            <constraint firstItem="wC9-wc-Thf" firstAttribute="top" secondItem="qiV-4r-5pa" secondAttribute="bottom" constant="25" id="vAb-7a-sxh"/>
+                            <constraint firstItem="qiV-4r-5pa" firstAttribute="leading" secondItem="zrJ-2V-hK4" secondAttribute="trailing" constant="24" id="zy5-TH-L6Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="capitalSwitch" destination="qiV-4r-5pa" id="Hfs-PA-w5T"/>
+                        <outlet property="coupleImg" destination="BqA-rG-kvL" id="bvE-Pr-FEe"/>
+                        <outlet property="fontSizeLabel" destination="rIM-b3-YXu" id="na9-dy-4y3"/>
+                        <outlet property="imgControl" destination="CDB-FT-4tX" id="VKZ-si-swP"/>
+                        <outlet property="imgControl2" destination="w2M-L7-w2n" id="G3Z-kl-osk"/>
+                        <outlet property="titleLabel" destination="JVC-U4-Leq" id="R6w-mr-jwW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285" y="371.99999999999994"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="couple1" width="143" height="202"/>
+    </resources>
+</document>
