@@ -68,7 +68,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var fontSizeLabel: UILabel!
     @IBAction func changeFontSize(sender: UISlider) {
         let fontSize = sender.value
-        fontSizeLabel.text = String(format: "$.0f", fontSize)
+        fontSizeLabel.text = String(format: "%.0f", fontSize)
         let fontSizeCGFloat = CGFloat(fontSize)
         titleLabel.font = UIFont.systemFontOfSize(fontSizeCGFloat)
     }
