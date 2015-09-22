@@ -42,7 +42,7 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Capitalization" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrJ-2V-hK4">
-                                <rect key="frame" x="194" y="270" width="114" height="21"/>
+                                <rect key="frame" x="185" y="270" width="114" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="ls0-WZ-0n7"/>
                                 </constraints>
@@ -99,10 +99,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qiV-4r-5pa" firstAttribute="leading" secondItem="zrJ-2V-hK4" secondAttribute="trailing" constant="24" id="6J0-jr-iFG"/>
+                            <constraint firstItem="qiV-4r-5pa" firstAttribute="leading" secondItem="zrJ-2V-hK4" secondAttribute="trailing" constant="54" id="6J0-jr-iFG"/>
                             <constraint firstItem="CDB-FT-4tX" firstAttribute="baseline" secondItem="w2M-L7-w2n" secondAttribute="firstBaseline" id="7u5-Ef-dwT"/>
                             <constraint firstItem="zrJ-2V-hK4" firstAttribute="top" secondItem="CDB-FT-4tX" secondAttribute="bottom" constant="13" id="AY5-yd-tGm"/>
-                            <constraint firstItem="zrJ-2V-hK4" firstAttribute="centerX" secondItem="rIM-b3-YXu" secondAttribute="centerX" constant="-1" id="BHB-bS-PAE"/>
+                            <constraint firstItem="zrJ-2V-hK4" firstAttribute="centerX" secondItem="rIM-b3-YXu" secondAttribute="centerX" constant="-10" id="BHB-bS-PAE"/>
                             <constraint firstItem="wC9-wc-Thf" firstAttribute="centerY" secondItem="rIM-b3-YXu" secondAttribute="centerY" constant="5.5" id="Ez6-By-YYM"/>
                             <constraint firstItem="w2M-L7-w2n" firstAttribute="top" secondItem="JVC-U4-Leq" secondAttribute="bottom" constant="17" id="F3a-bV-kaP"/>
                             <constraint firstItem="wC9-wc-Thf" firstAttribute="leading" secondItem="rIM-b3-YXu" secondAttribute="trailing" constant="16" id="KSj-CF-LFa"/>
@@ -119,7 +119,7 @@
                             <constraint firstAttribute="centerX" secondItem="JVC-U4-Leq" secondAttribute="centerX" id="of9-pJ-mps"/>
                             <constraint firstItem="CDB-FT-4tX" firstAttribute="leading" secondItem="JVC-U4-Leq" secondAttribute="leading" id="uM4-BP-Lgm"/>
                             <constraint firstAttribute="centerX" secondItem="BqA-rG-kvL" secondAttribute="centerX" id="wY0-ft-dJB"/>
-                            <constraint firstItem="zrJ-2V-hK4" firstAttribute="centerX" secondItem="CDB-FT-4tX" secondAttribute="centerX" id="wgr-yU-R4T"/>
+                            <constraint firstItem="zrJ-2V-hK4" firstAttribute="centerX" secondItem="CDB-FT-4tX" secondAttribute="centerX" constant="3.5" id="wgr-yU-R4T"/>
                         </constraints>
                     </view>
                     <connections>
