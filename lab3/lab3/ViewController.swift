@@ -23,28 +23,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func updateTipTotals(){
         let curFormatter        = NSNumberFormatter()
         
-        if let amout       = NSNumberFormatter().numberFromString(checkAmout.text!)!.floatValue {
-            amout = 0.0
-        }
-        //(checkAmout.text as String?).toFloat
-        let pct         = NSNumberFormatter().numberFromString(tipPercent.text!)!.floatValue
-        //(tipPercent.text as String?).floatValue/100
-        let numOfPeople = NSNumberFormatter().numberFromString(people.text!)!.integerValue
-        //Int(people.text)
+        let amout       = //NSNumberFormatter().numberFromString(checkAmout.text!)!.floatValue {
+            //amout = 0.0
+        //}
+        (checkAmout.text as NSString).floatValue
+        let pct         = //NSNumberFormatter().numberFromString(tipPercent.text!)!.floatValue
+        (tipPercent.text as NSString).floatValue/100
+        let numOfPeople = //NSNumberFormatter().numberFromString(people.text!)!.integerValue
+        people.text.toInt()
         
         let tip         = amout * pct
         let total       = amout + tip
-        var personTotal : Float = 0.0
-        if numOfPeople > 0 {
-            personTotal = total / Float(numOfPeople)
+        var personTotal : Float? = 0.0
+        if numOfPeople != nil{
+            if numOfPeople > 0 {
+                personTotal = total / Float(numOfPeople!)
+            }
         }
-        
         
         //creat curForm obj. from NSFormatter class
         curFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
         tipDue.text             = curFormatter.stringFromNumber(tip)
         totalDue.text           = curFormatter.stringFromNumber(total)
-        totalDuePerPerson.text  = curFormatter.stringFromNumber(personTotal)
+        totalDuePerPerson.text  = curFormatter.stringFromNumber(personTotal!)
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
