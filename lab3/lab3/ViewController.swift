@@ -46,10 +46,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
         tipDue.text             = curFormatter.stringFromNumber(tip)
         totalDue.text           = curFormatter.stringFromNumber(total)
         totalDuePerPerson.text  = curFormatter.stringFromNumber(personTotal!)
+        
+        
+        
+        var myAlert = UIAlertView()
+        myAlert.title = "Info"
+        myAlert.addButtonWithTitle("OK")
+        
+        if pct != 0 {
+            if pct*100 <= 9 {
+                myAlert.message = "Oh oh, do not too mean.."
+                myAlert.show()
+            }
+        }
+        
+        if numOfPeople != nil {
+            if numOfPeople < 1 {
+                myAlert.message = "No way, someone should pay!"
+                myAlert.show()
+            }
+        }
+        
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
         updateTipTotals()
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
