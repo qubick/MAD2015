@@ -114,12 +114,15 @@ class ViewController: UIViewController {
         //set string according to unit selection
         switch numGearbox {
             case 0:
+                imgListArray.removeAllObjects() //first clear the array elements
                 unitStr = "gear"
                 index = 6
             case 1:
+                imgListArray.removeAllObjects()
                 unitStr = "crank"
                 index = 5 //not sure
             case 2:
+                imgListArray.removeAllObjects()
                 unitStr = "dcam"
                 index = 8
             default:
@@ -154,8 +157,8 @@ class ViewController: UIViewController {
             DebugWindow.text = imgTitle
             println(imgTitle)
             var image = UIImage(named: imgTitle)
-            
             println(image)
+            
             imgListArray.addObject(image!)
             
             
@@ -166,7 +169,8 @@ class ViewController: UIViewController {
         
         if stopOrGo == 1 {
             self.imgSet.startAnimating()
-        } else {
+        } else if stopOrGo == 0 {
+            self.imgSet.animationDuration = 0.0
             self.imgSet.stopAnimating()
         }
         
