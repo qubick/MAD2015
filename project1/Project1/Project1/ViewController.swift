@@ -24,12 +24,15 @@ class ViewController: UIViewController {
         
         if chooseBot.selectedSegmentIndex == 0 {
             currBot = 0
+            DebugWindow.text = "android selected"
         }
         else if chooseBot.selectedSegmentIndex == 1 {
             currBot = 1
+            DebugWindow.text = "finn selected"
         }
         else if chooseBot.selectedSegmentIndex == 2 {
             currBot = 2
+            DebugWindow.text = "adabot selected"
         }
     }
     
@@ -42,6 +45,7 @@ class ViewController: UIViewController {
         numGearbox<3 ? numGearbox++ : 0 //when 3 kinds
         //change img set in sequence
         //reset max num
+        
     }
     
     @IBAction func btnSimulate(sender: UIButton) {
@@ -92,6 +96,8 @@ class ViewController: UIViewController {
                 imgTitle = "\(botStr)" + "\(unitStr)" + "\(i)"
                 self.imgSet.image = UIImage(named:"\(imgTitle)")
                 self.DebugWindow.text = imgTitle
+                
+                sleep(100)
                 
             })
             
