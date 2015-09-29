@@ -90,14 +90,26 @@ class ViewController: UIViewController {
                 checkSum = -1
         }
         
+        let delayInSeconds = 1.0 //get from slider
+        let delayInNanoSeconds = dispatch_time(DISPATCH_TIME_NOW,
+            Int64(delayInSeconds * Double(NSEC_PER_SEC)))
+        
+        let concurrentQueue =
+        dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+        
+        
         for i in 1...6 {
+            
+            //delay in NanoSeconds
+            dispatch_after(delayInNanoSeconds, concurrentQueue, {
                 
-            var imgTitle = "\(botStr)" + "\(unitStr)" + "\(i)"
-            imgSet.image = UIImage(named:"\(imgTitle)")
-            DebugWindow.text = imgTitle
+                var imgTitle = "\(botStr)" + "\(unitStr)" + "\(i)"
+                
+                self.imgSet.image = UIImage(named:"\(imgTitle)")
+                self.DebugWindow.text = imgTitle
             
-            sleep(100)
-            
+            //sleep(100)
+            })
         }
         
     }
