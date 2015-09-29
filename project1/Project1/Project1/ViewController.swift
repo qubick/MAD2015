@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     var speed       :Float = 1.0
     var imgTitle    :String = "android-gear1"
     
+    var imgListArray: NSMutableArray = []
+    
+    
     @IBOutlet weak var DebugWindow: UITextField!
     
     @IBOutlet weak var imgSet: UIImageView!
@@ -115,7 +118,7 @@ class ViewController: UIViewController {
             default:
                 checkSum = -1
         }
-        
+ /*
         let delayInSeconds = 1.0 //get from slider
         let delayInNanoSeconds = dispatch_time(DISPATCH_TIME_NOW,
             Int64(delayInSeconds * Double(NSEC_PER_SEC)))
@@ -136,6 +139,16 @@ class ViewController: UIViewController {
             //sleep(100)
             })
         }
+*/
+        for countValue in 1...6 {
+            imgTitle = "\(botStr)" + "\(unitStr)" + "\(countValue)"
+            var image = UIImage(named: imgTitle)
+            imgListArray.addObject(image!)
+        }
+        
+        self.imgSet.animationImages = imgListArray as [AnyObject]
+        self.imgSet.animationDuration = 1.0
+        self.imgSet.startAnimating()
         
     }
     
