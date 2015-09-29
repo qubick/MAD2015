@@ -42,10 +42,17 @@ class ViewController: UIViewController {
     
     @IBAction func btnChangeGear(sender: UIButton) {
         
-        numGearbox<3 ? numGearbox++ : 0 //when 3 kinds
+        //numGearbox<3 ? numGearbox++ : numGearbox-3
+        if numGearbox < 3 {
+            numGearbox++
+        } else {
+            numGearbox -= 3
+        }
+        //when 3 kinds
         //change img set in sequence
         //reset max num
         
+        DebugWindow.text = "\(numGearbox)"
     }
     
     @IBAction func btnSimulate(sender: UIButton) {
@@ -82,11 +89,7 @@ class ViewController: UIViewController {
             default:
                 checkSum = -1
         }
-        
-        let seconds = 4.0
-        let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-        var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-        
+      
         var imgTitle = "finn-gear"
         
         for i in 0...6 {
