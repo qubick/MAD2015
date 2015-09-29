@@ -34,6 +34,21 @@
                                     <action selector="btnSimulate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BAY-rW-JXc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHg-Wa-99W">
+                                <rect key="frame" x="46" y="464" width="159" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.56205916550000001" blue="0.10406337810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RhW-cK-0jT"/>
+                                    <constraint firstAttribute="width" constant="159" id="WG4-H5-74G"/>
+                                </constraints>
+                                <state key="normal" title="Change Gearbox">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnChangeGear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bsP-VO-Osf"/>
+                                </connections>
+                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xqx-bj-wuS">
                                 <rect key="frame" x="16" y="380" width="232" height="29"/>
                                 <constraints>
@@ -62,21 +77,17 @@
                                 <color key="textColor" red="1" green="0.56205916550000001" blue="0.10406337810000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHg-Wa-99W">
-                                <rect key="frame" x="46" y="464" width="159" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.56205916550000001" blue="0.10406337810000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="RhW-cK-0jT"/>
-                                    <constraint firstAttribute="width" constant="159" id="WG4-H5-74G"/>
-                                </constraints>
-                                <state key="normal" title="Change Gearbox">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnChangeGear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bsP-VO-Osf"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hs2-cC-0cq">
+                                <rect key="frame" x="134" y="543" width="128" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="debug window" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNZ-te-GfS">
+                                <rect key="frame" x="16" y="547" width="113" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -91,6 +102,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="DebugWindow" destination="Hs2-cC-0cq" id="Ug1-s5-pdP"/>
                         <outlet property="chooseBot" destination="xqx-bj-wuS" id="MmM-G1-YJp"/>
                         <outlet property="imgSet" destination="DOu-SO-Qm5" id="M84-6A-jfD"/>
                     </connections>

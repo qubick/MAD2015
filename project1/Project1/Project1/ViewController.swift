@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     var checkSum    :Int = 0
     var speed       :Float = 1.0
     
+    @IBOutlet weak var DebugWindow: UITextField!
+    
     @IBOutlet weak var imgSet: UIImageView!
     @IBOutlet weak var chooseBot: UISegmentedControl!
     
@@ -44,23 +46,60 @@ class ViewController: UIViewController {
     
     @IBAction func btnSimulate(sender: UIButton) {
         
-        //change imgset according to gearbox
+        DebugWindow.text = "test"
+        
+        var unitStr = "gear" //default
+        var botStr = "android"
+        
+        
+        //set string according to bot selection
         switch currBot {
+        case 0:
+            botStr = "android-"
+            checkSum = 0
+        case 1:
+            botStr = "finn-"
+            checkSum = 1
+        case 2:
+            botStr = "adabot-"
+            checkSum = 2
+        default:
+            checkSum = -1
+        }
+        
+        //set string according to unit selection
+        switch numGearbox {
             case 0:
-                //load android imgset
-                //loop imgset 
-                //delay((5-speed)*100)
-                checkSum = 0
+                unitStr = "gear"
             case 1:
-                //load finn imgset
-                checkSum = 1
+                unitStr = "crank"
             case 2:
-                //load adabot imgset
-                checkSum = 2
+                unitStr = "doublecam"
             default:
                 checkSum = -1
         }
+        
+        let seconds = 4.0
+        let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+        var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        
+        var imgTitle = "finn-gear"
+        
+        for i in 0...6 {
+        
+            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                
+                imgTitle = "\(botStr)" + "\(unitStr)" + "\(i)"
+                self.imgSet.image = UIImage(named:"\(imgTitle)")
+                self.DebugWindow.text = imgTitle
+                
+            })
+            
+        }
+        
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
