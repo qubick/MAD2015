@@ -55,7 +55,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if pct != 0 {
             if pct*100 <= 9 {
-                myAlert.message = "Oh oh, do not too mean.."
+                myAlert.message = "Oh oh, Don't be too mean.."
                 myAlert.show()
             }
         }
