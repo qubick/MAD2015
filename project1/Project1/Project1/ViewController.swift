@@ -43,10 +43,10 @@ class ViewController: UIViewController {
     @IBAction func btnChangeGear(sender: UIButton) {
         
         //numGearbox<3 ? numGearbox++ : numGearbox-3
-        if numGearbox < 3 {
+        if numGearbox < 2 {
             numGearbox++
         } else {
-            numGearbox -= 3
+            numGearbox -= 2
         }
         //when 3 kinds
         //change img set in sequence
@@ -89,20 +89,14 @@ class ViewController: UIViewController {
             default:
                 checkSum = -1
         }
-      
-        var imgTitle = "finn-gear"
         
-        for i in 0...6 {
-        
-            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+        for i in 1...6 {
                 
-                imgTitle = "\(botStr)" + "\(unitStr)" + "\(i)"
-                self.imgSet.image = UIImage(named:"\(imgTitle)")
-                self.DebugWindow.text = imgTitle
-                
-                sleep(100)
-                
-            })
+            var imgTitle = "\(botStr)" + "\(unitStr)" + "\(i)"
+            imgSet.image = UIImage(named:"\(imgTitle)")
+            DebugWindow.text = imgTitle
+            
+            sleep(100)
             
         }
         
