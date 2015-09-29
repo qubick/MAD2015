@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var currBot     :Int = 0 //android as default
     var checkSum    :Int = 0
     var speed       :Float = 1.0
+    var imgTitle    :String = "android-gear1"
     
     @IBOutlet weak var DebugWindow: UITextField!
     
@@ -25,14 +26,17 @@ class ViewController: UIViewController {
         if chooseBot.selectedSegmentIndex == 0 {
             currBot = 0
             DebugWindow.text = "android selected"
+            imgSet.image = UIImage(named: "android-gear1") //should check gear type
         }
         else if chooseBot.selectedSegmentIndex == 1 {
             currBot = 1
             DebugWindow.text = "finn selected"
+            imgSet.image = UIImage(named: "finn-gear1")
         }
         else if chooseBot.selectedSegmentIndex == 2 {
             currBot = 2
             DebugWindow.text = "adabot selected"
+            imgSet.image = UIImage(named: "adabot-gear1")
         }
     }
     
@@ -42,16 +46,38 @@ class ViewController: UIViewController {
     
     @IBAction func btnChangeGear(sender: UIButton) {
         
-        //numGearbox<3 ? numGearbox++ : numGearbox-3
+        //numGearbox<2 ? numGearbox++ : numGearbox-2
         if numGearbox < 2 {
             numGearbox++
         } else {
             numGearbox -= 2
         }
-        //when 3 kinds
-        //change img set in sequence
-        //reset max num
         
+        var bot = "android-"
+        switch currBot {
+            case 0:
+                bot = "android-"
+            case 1:
+                bot = "finn-"
+            case 2:
+                bot = "adabot-"
+            default:
+                checkSum = -1
+            
+        }
+        switch numGearbox {
+        
+        case 0:
+            imgTitle = "\(bot)" + "gear1"
+        case 1:
+            imgTitle = "\(bot)" + "crank1"
+        case 2:
+            imgTitle = "\(bot)" + "dcam1"
+        default:
+            checkSum = -1
+        }
+        
+        imgSet.image = UIImage(named: imgTitle)
         DebugWindow.text = "\(numGearbox)"
     }
     
@@ -97,16 +123,15 @@ class ViewController: UIViewController {
         let concurrentQueue =
         dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
         
-        
         for i in 1...6 {
             
             //delay in NanoSeconds
             dispatch_after(delayInNanoSeconds, concurrentQueue, {
                 
-                var imgTitle = "\(botStr)" + "\(unitStr)" + "\(i)"
+                self.imgTitle = "\(botStr)" + "\(unitStr)" + "\(i)"
                 
-                self.imgSet.image = UIImage(named:"\(imgTitle)")
-                self.DebugWindow.text = imgTitle
+                self.imgSet.image = UIImage(named:"\(self.imgTitle)")
+                self.DebugWindow.text = self.imgTitle
             
             //sleep(100)
             })
