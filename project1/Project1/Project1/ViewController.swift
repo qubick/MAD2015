@@ -120,7 +120,7 @@ class ViewController: UIViewController {
                 unitStr = "crank"
                 index = 5 //not sure
             case 2:
-                unitStr = "doublecam"
+                unitStr = "dcam"
                 index = 8
             default:
                 checkSum = -1
@@ -152,9 +152,12 @@ class ViewController: UIViewController {
             
             //debug
             DebugWindow.text = imgTitle
-            
+            println(imgTitle)
             var image = UIImage(named: imgTitle)
+            
+            println(image)
             imgListArray.addObject(image!)
+            
             
         }
         
@@ -169,8 +172,7 @@ class ViewController: UIViewController {
         
 
     }
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
