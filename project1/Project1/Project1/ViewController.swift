@@ -162,7 +162,7 @@ class ViewController: UIViewController {
         }
         
         self.imgSet.animationImages = imgListArray as [AnyObject]
-        self.imgSet.animationDuration = 1.0 //should get from slider value
+        self.imgSet.animationDuration = 2.0 //should get from slider value
         
         if stopOrGo == 1 {
             self.imgSet.startAnimating()
