@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     var imgTitle    :String = "android-gear1"
     
     var imgListArray: NSMutableArray = []
+    var txtListArray: NSMutableArray = []
     
+    var stopOrGo = 0
     
     @IBOutlet weak var DebugWindow: UITextField!
     
@@ -90,7 +92,9 @@ class ViewController: UIViewController {
         
         var unitStr = "gear" //default
         var botStr = "android"
+        var index = 6
         
+        stopOrGo = 1 - stopOrGo
         
         //set string according to bot selection
         switch currBot {
@@ -111,10 +115,13 @@ class ViewController: UIViewController {
         switch numGearbox {
             case 0:
                 unitStr = "gear"
+                index = 6
             case 1:
                 unitStr = "crank"
+                index = 5 //not sure
             case 2:
                 unitStr = "doublecam"
+                index = 8
             default:
                 checkSum = -1
         }
@@ -140,16 +147,27 @@ class ViewController: UIViewController {
             })
         }
 */
-        for countValue in 1...6 {
+        for countValue in 1...index {
             imgTitle = "\(botStr)" + "\(unitStr)" + "\(countValue)"
+            
+            //debug
+            DebugWindow.text = imgTitle
+            
             var image = UIImage(named: imgTitle)
             imgListArray.addObject(image!)
+            
         }
         
         self.imgSet.animationImages = imgListArray as [AnyObject]
-        self.imgSet.animationDuration = 1.0
-        self.imgSet.startAnimating()
+        self.imgSet.animationDuration = 1.0 //should get from slider value
         
+        if stopOrGo == 1 {
+            self.imgSet.startAnimating()
+        } else {
+            self.imgSet.stopAnimating()
+        }
+        
+
     }
     
     
