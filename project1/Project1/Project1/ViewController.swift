@@ -29,7 +29,10 @@ class ViewController: UIViewController {
     @IBAction func changeImgSet(sender: UISegmentedControl) {
         
         //before check segment index, assign currently selected gearbox
-        var geartype = "gear1" //1 for all 1st state img
+        var geartype : String = "gear1" //1 for all 1st state img
+        
+        stopOrGo = 0
+        toggleAnimation() //if animating, stop when the bot selection is changed
         
         switch numGearbox {
             case 0:
@@ -46,23 +49,25 @@ class ViewController: UIViewController {
             currBot = 0
             DebugWindow.text = "android selected"
             imgTitle = "android-" + "\(imgTitle)"
-        }
-        else if chooseBot.selectedSegmentIndex == 1 {
+        } else if chooseBot.selectedSegmentIndex == 1 {
             currBot = 1
             DebugWindow.text = "finn selected"
             imgTitle = "finn-" + "\(imgTitle)"
-        }
-        else if chooseBot.selectedSegmentIndex == 2 {
+        } else if chooseBot.selectedSegmentIndex == 2 {
             currBot = 2
             DebugWindow.text = "adabot selected"
             imgTitle = "adabot-" + "\(imgTitle)"
+        } else {
+            checkSum = -1
         }
         
-        imgSet.image = UIImage(named: imgTitle) //set img view to selected image
+        //set img view to selected image
+        imgSet.image = UIImage(named: imgTitle)
     }
     
     @IBAction func changeSpeed(sender: UISlider) {
         speed = sender.value
+        toggleAnimation()
     }
     
     @IBAction func btnChangeGear(sender: UIButton) {
@@ -123,21 +128,18 @@ class ViewController: UIViewController {
         var botStr = "android"
         var index = 6
         
-        stopOrGo = 1 - stopOrGo
+        stopOrGo = 1 - stopOrGo //toggle whenever it's clicked
         
         //set string according to bot selection
         switch currBot {
-        case 0:
-            botStr = "android-"
-            checkSum = 0
-        case 1:
-            botStr = "finn-"
-            checkSum = 1
-        case 2:
-            botStr = "adabot-"
-            checkSum = 2
-        default:
-            checkSum = -1
+            case 0:
+                botStr = "android-"
+            case 1:
+                botStr = "finn-"
+            case 2:
+                botStr = "adabot-"
+            default:
+                checkSum = -1
         }
         
         //set string according to unit selection
@@ -194,19 +196,21 @@ class ViewController: UIViewController {
         }
         
         self.imgSet.animationImages = imgListArray as [AnyObject]
-        self.imgSet.animationDuration = 2.0 //should get from slider value
         
-        if stopOrGo == 1 {
-            self.imgSet.startAnimating()
-        } else if stopOrGo == 0 {
-            self.imgSet.animationDuration = 0.0
-            self.imgSet.stopAnimating()
-        }
-        
+        toggleAnimation()
 
     }
 
-    
+    func toggleAnimation() {
+        imgSet.animationDuration = NSTimeInterval(6.0 - speed) //toggle speed number
+            //lower slide value(min.1) - lower simulation speed
+            //high slide value(max.5) - simulation speed
+        if stopOrGo == 0 {
+            self.imgSet.stopAnimating()
+        } else if stopOrGo == 1 {
+            self.imgSet.startAnimating()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
