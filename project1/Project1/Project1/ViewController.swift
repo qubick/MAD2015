@@ -67,6 +67,9 @@ class ViewController: UIViewController {
     
     @IBAction func btnChangeGear(sender: UIButton) {
         
+        var bot :String = "android-" //default
+        var geartype :String = "gear"
+
         self.imgSet.stopAnimating()
         stopOrGo = 0
         
@@ -77,7 +80,6 @@ class ViewController: UIViewController {
             numGearbox -= 2
         }
         
-        var bot = "android-"
         switch currBot {
             case 0:
                 bot = "android-"
@@ -93,19 +95,23 @@ class ViewController: UIViewController {
         switch numGearbox {
             case 0:
                 imgTitle = "\(bot)" + "gear1"
+                geartype = "gear"
             case 1:
                 imgTitle = "\(bot)" + "crank1"
+                geartype = "crank"
                 if currBot == 1 { //if android
                     DebugWindow.text = "added hinge to back for supports"
                     //add alert
                 }
             case 2:
                 imgTitle = "\(bot)" + "dcam1"
+                geartype = "double cam"
             default:
                 checkSum = -1
         }
         
         imgSet.image = UIImage(named: imgTitle)
+        //gearLabel.text = geartype
         DebugWindow.text = "\(numGearbox)"
     }
     

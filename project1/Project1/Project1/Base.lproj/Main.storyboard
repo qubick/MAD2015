@@ -23,7 +23,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypc-0e-aaW">
-                                <rect key="frame" x="46" y="505" width="159" height="30"/>
+                                <rect key="frame" x="16" y="505" width="232" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.56205916550000001" blue="0.10406337810000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="159" id="hHh-yO-GhW"/>
@@ -35,21 +35,6 @@
                                 </state>
                                 <connections>
                                     <action selector="btnSimulate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BAY-rW-JXc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHg-Wa-99W">
-                                <rect key="frame" x="46" y="464" width="159" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.56205916550000001" blue="0.10406337810000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="RhW-cK-0jT"/>
-                                    <constraint firstAttribute="width" constant="159" id="WG4-H5-74G"/>
-                                </constraints>
-                                <state key="normal" title="Change Gearbox">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnChangeGear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bsP-VO-Osf"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xqx-bj-wuS">
@@ -85,17 +70,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHg-Wa-99W">
+                                <rect key="frame" x="16" y="464" width="232" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.56205916550000001" blue="0.10406337810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RhW-cK-0jT"/>
+                                    <constraint firstAttribute="width" constant="159" id="WG4-H5-74G"/>
+                                </constraints>
+                                <state key="normal" title="Change Gearbox">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnChangeGear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bsP-VO-Osf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DOu-SO-Qm5" firstAttribute="centerX" secondItem="xqx-bj-wuS" secondAttribute="centerX" id="Q1K-hU-iwb"/>
                             <constraint firstItem="KB2-oJ-iDX" firstAttribute="leading" secondItem="xqx-bj-wuS" secondAttribute="leading" id="QZg-mi-C0N"/>
-                            <constraint firstItem="bHg-Wa-99W" firstAttribute="centerX" secondItem="Ypc-0e-aaW" secondAttribute="centerX" id="UfK-hT-Fje"/>
                             <constraint firstItem="Yvt-4k-KBl" firstAttribute="trailing" secondItem="xqx-bj-wuS" secondAttribute="trailing" id="ZAx-vi-CUy"/>
                             <constraint firstItem="DOu-SO-Qm5" firstAttribute="centerX" secondItem="Ypc-0e-aaW" secondAttribute="centerX" id="fTd-ZV-hLa"/>
+                            <constraint firstItem="bHg-Wa-99W" firstAttribute="centerX" secondItem="Ypc-0e-aaW" secondAttribute="centerX" id="gJ8-m8-ftL"/>
                             <constraint firstAttribute="centerX" secondItem="Ypc-0e-aaW" secondAttribute="centerX" id="jXt-i7-fh0"/>
                             <constraint firstAttribute="centerX" secondItem="xqx-bj-wuS" secondAttribute="centerX" id="m1T-ZS-4RD"/>
-                            <constraint firstItem="bHg-Wa-99W" firstAttribute="centerX" secondItem="DOu-SO-Qm5" secondAttribute="centerX" id="xFC-jz-8p3"/>
                         </constraints>
                     </view>
                     <connections>
