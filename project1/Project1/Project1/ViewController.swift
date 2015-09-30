@@ -28,21 +28,37 @@ class ViewController: UIViewController {
     
     @IBAction func changeImgSet(sender: UISegmentedControl) {
         
+        //before check segment index, assign currently selected gearbox
+        var geartype = "gear1" //1 for all 1st state img
+        
+        switch numGearbox {
+            case 0:
+                imgTitle = "gear1"
+            case 1:
+                imgTitle = "crank1"
+            case 2:
+                imgTitle = "dcam1"
+            default:
+                checkSum = -1
+        }
+        
         if chooseBot.selectedSegmentIndex == 0 {
             currBot = 0
             DebugWindow.text = "android selected"
-            imgSet.image = UIImage(named: "android-gear1") //should check gear type
+            imgTitle = "android-" + "\(imgTitle)"
         }
         else if chooseBot.selectedSegmentIndex == 1 {
             currBot = 1
             DebugWindow.text = "finn selected"
-            imgSet.image = UIImage(named: "finn-gear1")
+            imgTitle = "finn-" + "\(imgTitle)"
         }
         else if chooseBot.selectedSegmentIndex == 2 {
             currBot = 2
             DebugWindow.text = "adabot selected"
-            imgSet.image = UIImage(named: "adabot-gear1")
+            imgTitle = "adabot-" + "\(imgTitle)"
         }
+        
+        imgSet.image = UIImage(named: imgTitle) //set img view to selected image
     }
     
     @IBAction func changeSpeed(sender: UISlider) {
