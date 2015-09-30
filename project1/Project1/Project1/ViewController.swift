@@ -51,6 +51,9 @@ class ViewController: UIViewController {
     
     @IBAction func btnChangeGear(sender: UIButton) {
         
+        self.imgSet.stopAnimating()
+        stopOrGo = 0
+        
         //numGearbox<2 ? numGearbox++ : numGearbox-2
         if numGearbox < 2 {
             numGearbox++
@@ -70,16 +73,20 @@ class ViewController: UIViewController {
                 checkSum = -1
             
         }
-        switch numGearbox {
         
-        case 0:
-            imgTitle = "\(bot)" + "gear1"
-        case 1:
-            imgTitle = "\(bot)" + "crank1"
-        case 2:
-            imgTitle = "\(bot)" + "dcam1"
-        default:
-            checkSum = -1
+        switch numGearbox {
+            case 0:
+                imgTitle = "\(bot)" + "gear1"
+            case 1:
+                imgTitle = "\(bot)" + "crank1"
+                if currBot == 1 { //if android
+                    DebugWindow.text = "added hinge to back for supports"
+                    //add alert
+                }
+            case 2:
+                imgTitle = "\(bot)" + "dcam1"
+            default:
+                checkSum = -1
         }
         
         imgSet.image = UIImage(named: imgTitle)
@@ -120,7 +127,7 @@ class ViewController: UIViewController {
             case 1:
                 imgListArray.removeAllObjects()
                 unitStr = "crank"
-                index = 5 //not sure
+                index = 6
             case 2:
                 imgListArray.removeAllObjects()
                 unitStr = "dcam"
