@@ -47,15 +47,12 @@ class ViewController: UIViewController {
         
         if chooseBot.selectedSegmentIndex == 0 {
             currBot = 0
-            DebugWindow.text = "android selected"
             imgTitle = "android-" + "\(imgTitle)"
         } else if chooseBot.selectedSegmentIndex == 1 {
             currBot = 1
-            DebugWindow.text = "finn selected"
             imgTitle = "finn-" + "\(imgTitle)"
         } else if chooseBot.selectedSegmentIndex == 2 {
             currBot = 2
-            DebugWindow.text = "adabot selected"
             imgTitle = "adabot-" + "\(imgTitle)"
         } else {
             checkSum = -1
@@ -75,8 +72,8 @@ class ViewController: UIViewController {
         var bot :String = "android-" //default
         var geartype :String = "gear"
 
-        self.imgSet.stopAnimating()
         stopOrGo = 0
+        toggleAnimation()
         
         //numGearbox<2 ? numGearbox++ : numGearbox-2
         if numGearbox < 2 {
@@ -100,17 +97,14 @@ class ViewController: UIViewController {
         switch numGearbox {
             case 0:
                 imgTitle = "\(bot)" + "gear1"
-                geartype = "gear"
             case 1:
                 imgTitle = "\(bot)" + "crank1"
-                geartype = "crank"
                 if currBot == 1 { //if android
                     DebugWindow.text = "added hinge to back for supports"
-                    //add alert
+                    //add alert for special situ
                 }
             case 2:
                 imgTitle = "\(bot)" + "dcam1"
-                geartype = "double cam"
             default:
                 checkSum = -1
         }
@@ -121,8 +115,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnSimulate(sender: UIButton) {
-        
-        DebugWindow.text = "test"
         
         var unitStr = "gear" //default
         var botStr = "android"
@@ -191,7 +183,6 @@ class ViewController: UIViewController {
             println(image)
             
             imgListArray.addObject(image!)
-            
             
         }
         
