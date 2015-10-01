@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var numGearbox  :Int = 0
     var currBot     :Int = 0 //android as default
     var checkSum    :Int = 0
-    var speed       :Float = 1.0
+    var speed       :Float = 5.0 //default
     var imgTitle    :String = "android-gear1"
     
     var imgListArray: NSMutableArray = []
@@ -187,7 +187,6 @@ class ViewController: UIViewController {
         }
         
         self.imgSet.animationImages = imgListArray as [AnyObject]
-        
         toggleAnimation()
 
     }
@@ -196,6 +195,7 @@ class ViewController: UIViewController {
         imgSet.animationDuration = NSTimeInterval(6.0 - speed) //toggle speed number
             //lower slide value(min.1) - lower simulation speed
             //high slide value(max.5) - simulation speed
+        DebugWindow.text = "\(6.0-speed)"
         if stopOrGo == 0 {
             self.imgSet.stopAnimating()
         } else if stopOrGo == 1 {
