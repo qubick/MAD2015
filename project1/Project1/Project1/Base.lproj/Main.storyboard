@@ -52,7 +52,7 @@
                                     <action selector="changeImgSet:" destination="vXZ-lx-hvc" eventType="valueChanged" id="8dg-CS-vHj"/>
                                 </connections>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="3" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="Yvt-4k-KBl">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.7000000000000002" minValue="3" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="Yvt-4k-KBl">
                                 <rect key="frame" x="132" y="426" width="118" height="31"/>
                                 <color key="tintColor" red="1" green="0.56205916550000001" blue="0.10406337810000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
