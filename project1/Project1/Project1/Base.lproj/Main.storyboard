@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -52,7 +52,7 @@
                                     <action selector="changeImgSet:" destination="vXZ-lx-hvc" eventType="valueChanged" id="8dg-CS-vHj"/>
                                 </connections>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.7000000000000002" minValue="3" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="Yvt-4k-KBl">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="3" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="Yvt-4k-KBl">
                                 <rect key="frame" x="132" y="426" width="118" height="31"/>
                                 <color key="tintColor" red="1" green="0.56205916550000001" blue="0.10406337810000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -65,11 +65,6 @@
                                 <color key="textColor" red="1" green="0.56205916550000001" blue="0.10406337810000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hs2-cC-0cq">
-                                <rect key="frame" x="46" y="543" width="159" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHg-Wa-99W">
                                 <rect key="frame" x="16" y="464" width="232" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.56205916550000001" blue="0.10406337810000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -98,7 +93,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="DebugWindow" destination="Hs2-cC-0cq" id="Ug1-s5-pdP"/>
                         <outlet property="chooseBot" destination="xqx-bj-wuS" id="MmM-G1-YJp"/>
                         <outlet property="imgSet" destination="DOu-SO-Qm5" id="M84-6A-jfD"/>
                     </connections>
@@ -108,6 +102,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="android-gear1" width="103" height="145"/>
+        <image name="android-gear1" width="108" height="156"/>
     </resources>
 </document>

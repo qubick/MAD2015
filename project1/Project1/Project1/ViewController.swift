@@ -100,7 +100,7 @@ class ViewController: UIViewController {
             case 1:
                 imgTitle = "\(bot)" + "crank1"
                 if currBot == 1 { //if android
-                    DebugWindow.text = "added hinge to back for supports"
+                    //DebugWindow.text = "added hinge to back for supports"
                     //add alert for special situ
                 }
             case 2:
@@ -111,7 +111,7 @@ class ViewController: UIViewController {
         
         imgSet.image = UIImage(named: imgTitle)
         //gearLabel.text = geartype
-        DebugWindow.text = "\(numGearbox)"
+        //DebugWindow.text = "\(numGearbox)"
     }
     
     @IBAction func btnSimulate(sender: UIButton) {
@@ -177,7 +177,7 @@ class ViewController: UIViewController {
             imgTitle = "\(botStr)" + "\(unitStr)" + "\(countValue)"
             
             //debug
-            DebugWindow.text = imgTitle
+            //DebugWindow.text = imgTitle
             println(imgTitle)
             var image = UIImage(named: imgTitle)
             println(image)
@@ -195,7 +195,7 @@ class ViewController: UIViewController {
         imgSet.animationDuration = NSTimeInterval(6.0 - speed) //toggle speed number
             //lower slide value(min.1) - lower simulation speed
             //high slide value(max.5) - simulation speed
-        DebugWindow.text = "\(6.0-speed)"
+        //DebugWindow.text = "\(6.0-speed)"
         if stopOrGo == 0 {
             self.imgSet.stopAnimating()
         } else if stopOrGo == 1 {
