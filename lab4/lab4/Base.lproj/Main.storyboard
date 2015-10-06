@@ -52,6 +52,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="nemo" width="86" height="65"/>
+        <image name="nemo" width="133" height="101"/>
     </resources>
 </document>

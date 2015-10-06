@@ -30,6 +30,11 @@ class ViewController: UIViewController {
     }
     
     func moveImg(){
+        let duration = Double(sliderSpeed.value)
+        UIView.beginAnimations("nemo", context: nil)
+        UIView.animateWithDuration(duration, animations: {
+            self.imgNemo.center = CGPointMake(self.imgNemo.center.x + self.delta.x, self.imgNemo.center.y + self.delta.y)})
+        UIView.commitAnimations()
         
         imgNemo.center = CGPointMake(imgNemo.center.x + delta.x, imgNemo.center.y + delta.y)
         
