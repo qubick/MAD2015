@@ -33,9 +33,12 @@ class ViewController: UIViewController {
         let duration = Double(sliderSpeed.value)
         UIView.beginAnimations("nemo", context: nil)
         UIView.animateWithDuration(duration, animations: {
-            self.imgNemo.center = CGPointMake(self.imgNemo.center.x + self.delta.x, self.imgNemo.center.y + self.delta.y)})
+            self.imgNemo.transform = CGAffineTransformMakeTranslation(self.translation.x, self.translation.y)
+            self.translation.x += self.delta.x
+            self.translation.y += self.delta.y
+        })
         UIView.commitAnimations()
-        
+        /*
         imgNemo.center = CGPointMake(imgNemo.center.x + delta.x, imgNemo.center.y + delta.y)
         
         if imgNemo.center.x > view.bounds.size.width - nemoRadius || imgNemo.center.x < nemoRadius {
@@ -43,6 +46,17 @@ class ViewController: UIViewController {
         }
         
         if imgNemo.center.y > view.bounds.size.height - nemoRadius || imgNemo.center.y < nemoRadius {
+            delta.y = -delta.y
+        }
+        */
+        
+        if imgNemo.center.x + translation.x > view.bounds.size.width - nemoRadius || imgNemo.center.x + translation.x < nemoRadius {
+        
+            delta.x = -delta.x
+        }
+        
+        if imgNemo.center.y + translation.y > view.bounds.size.height - nemoRadius || imgNemo.center.y + translation.y < nemoRadius {
+            
             delta.y = -delta.y
         }
     }
