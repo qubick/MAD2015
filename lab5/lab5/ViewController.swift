@@ -54,19 +54,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     
     @IBAction func btnGoHome(sender: UIButton) {
-        /*
-        
-        location = CLLocationCoordinate2D(latitude: 37.615246, longitude: 126.715632)
-        let region = MKCoordinateRegionMake(location, span)
-        
-        mapView.setRegion(region, animated: true)
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = "New Oleans"
-        annotation.subtitle =  "Louisiana"
-        mapView.addAnnotation(annotation)
-*/
         
         let newlocation = CLLocationCoordinate2D(latitude: 37.615246, longitude: 126.715632)
         let region = MKCoordinateRegionMake(newlocation, span)
