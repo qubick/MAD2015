@@ -23,7 +23,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nemo" translatesAutoresizingMaskIntoConstraints="NO" id="i03-lo-QV9">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FjD-nk-2Vh">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.080000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FjD-nk-2Vh">
                                 <rect key="frame" x="323" y="10" width="212" height="31"/>
                                 <color key="tintColor" red="0.99944839819500553" green="1" blue="0.099410504028693336" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
