@@ -10,11 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var delta = CGPointMake(12, 4)
+    var delta = CGPointMake(1, 12)
     var nemoRadius = CGFloat()
     var timer = NSTimer()
     var translation = CGPointMake(0.0, 0.0)
     var angle:CGFloat = 0.0
+    var imgListArray : NSMutableArray = []
+    
     
     @IBOutlet weak var sliderLabel: UILabel!
     @IBOutlet weak var imgNemo: UIImageView!
@@ -24,6 +26,13 @@ class ViewController: UIViewController {
         changeSliderValue()
     }
     
+    func toggleDelta(){
+        if delta == CGPoint(x: 1, y: 12) {
+            delta = CGPoint(x: 12, y: 4)
+        } else  {
+            delta = CGPoint(x: 1, y: 12)
+        }
+    }
     func changeSliderValue(){
         sliderLabel.text = String(format: "%.2f", sliderSpeed.value)
         timer = NSTimer.scheduledTimerWithTimeInterval(Double(sliderSpeed.value), target:self, selector:"moveImg", userInfo:nil, repeats: true)
@@ -62,6 +71,14 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
+        imgListArray.addObject(UIImage(named: "nemo1")!)
+    
+        imgListArray.addObject(UIImage(named: "nemo2")!)
+        
+        self.imgNemo.animationImages = imgListArray as [AnyObject]
+        imgNemo.animationDuration = NSTimeInterval(1.0)
+        self.imgNemo.startAnimating()
         
         nemoRadius = imgNemo.frame.size.width/2
         changeSliderValue()
