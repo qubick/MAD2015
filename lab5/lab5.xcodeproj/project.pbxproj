@@ -13,6 +13,8 @@
 		0E593B361BC6C6EE005E8AD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E593B351BC6C6EE005E8AD7 /* Images.xcassets */; };
 		0E593B391BC6C6EE005E8AD7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E593B371BC6C6EE005E8AD7 /* LaunchScreen.xib */; };
 		0E593B451BC6C6EE005E8AD7 /* lab5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E593B441BC6C6EE005E8AD7 /* lab5Tests.swift */; };
+		0E593B4F1BC6C7A4005E8AD7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E593B4E1BC6C7A4005E8AD7 /* CoreLocation.framework */; };
+		0E593B511BC6C7AB005E8AD7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E593B501BC6C7AB005E8AD7 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		0E593B3E1BC6C6EE005E8AD7 /* lab5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lab5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E593B431BC6C6EE005E8AD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E593B441BC6C6EE005E8AD7 /* lab5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lab5Tests.swift; sourceTree = "<group>"; };
+		0E593B4E1BC6C7A4005E8AD7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0E593B501BC6C7AB005E8AD7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E593B511BC6C7AB005E8AD7 /* MapKit.framework in Frameworks */,
+				0E593B4F1BC6C7A4005E8AD7 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,8 @@
 		0E593B201BC6C6EE005E8AD7 = {
 			isa = PBXGroup;
 			children = (
+				0E593B501BC6C7AB005E8AD7 /* MapKit.framework */,
+				0E593B4E1BC6C7A4005E8AD7 /* CoreLocation.framework */,
 				0E593B2B1BC6C6EE005E8AD7 /* lab5 */,
 				0E593B411BC6C6EE005E8AD7 /* lab5Tests */,
 				0E593B2A1BC6C6EE005E8AD7 /* Products */,
