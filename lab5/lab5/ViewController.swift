@@ -12,19 +12,25 @@ import MapKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
-    let location = CLLocationCoordinate2D(latitude: 29.959492, longitude: -90.064887)
     let span = MKCoordinateSpanMake(0.05, 0.05)
     var locationManager = CLLocationManager()
-    
+    var annotation = MKPointAnnotation()
     
     @IBOutlet weak var mapView: MKMapView!
     
     
     func locationManager(manager: CLLocationManager!, didUpdateLocation location: [AnyObject]!) {
+        
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegionMake(manager.location.coordinate, span)
         
         mapView.setRegion(region, animated: true)
+        
+        annotation.coordinate = manager.location.coordinate
+        annotation.title = "You are here"
+        annotation.subtitle = "Latitue: \(manager.location.coordinate.latitude), Longitude: \(manager.location.coordinate.longitude)"
+        
+        mapView.addAnnotation(annotation)
     }
     
     
@@ -70,7 +76,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         /* just for loading default location based on GPS coordinate */
-        
+        let location = CLLocationCoordinate2D(latitude: 29.959492, longitude: -90.064887)
         let region = MKCoordinateRegionMake(location, span)
         
         mapView.setRegion(region, animated: true)
