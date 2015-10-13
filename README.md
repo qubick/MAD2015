@@ -11,5 +11,8 @@ Swift/Java
 Xcode/SDK, Cocoa Framework
 Android Studio (or Eclipse)
 
+## Reference
+
+OpenCV tutorial https://github.com/BloodAxe/OpenCV-Tutorial
 
 (c) CC
