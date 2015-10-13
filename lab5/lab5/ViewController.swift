@@ -153,15 +153,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         /* just for loading default location based on GPS coordinate */
-        let location = CLLocationCoordinate2D(latitude: 29.959492, longitude: -90.064887)
+        let location = CLLocationCoordinate2D(latitude: 38.907192, longitude: -77.036871)
         let region = MKCoordinateRegionMake(location, span)
         
         mapView.setRegion(region, animated: true)
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
-        annotation.title = "Burbon Street"
-        annotation.subtitle =  "New Oleans, LA"
+        annotation.title = "Washington D.C."
+        annotation.subtitle =  "Unite States"
         mapView.addAnnotation(annotation)
 
         
