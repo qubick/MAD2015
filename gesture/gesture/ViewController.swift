@@ -29,6 +29,14 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func handlePinch(sender: UIPinchGestureRecognizer) {
+        sender.view!.transform = CGAffineTransformScale(sender.view!.transform, sender.scale, sender.scale)
+        sender.scale = 1
+    }
+    
+    @IBAction func handleRotate(sender: UIRotationGestureRecognizer) {
+        sender.view!.transform = CGAffineTransformRotate(sender.view!.transform, sender.rotation)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
