@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lBe-2N-6qJ">
-                                <rect key="frame" x="124" y="239" width="363" height="341"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lBe-2N-6qJ">
+                                <rect key="frame" x="125" y="239" width="350" height="341"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="341" id="1g5-UQ-6JN"/>
                                     <constraint firstAttribute="width" constant="363" id="7Ip-Dz-myD"/>
@@ -29,9 +29,13 @@
                                     </mask>
                                 </variation>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB5-uK-iBz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB5-uK-iBz">
                                 <rect key="frame" x="221" y="194" width="158" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="Uzf-Ia-NhC"/>
+                                    <constraint firstAttribute="height" constant="30" id="ltN-ac-CO2"/>
+                                </constraints>
                                 <state key="normal" title="Go to my home">
                                     <color key="titleColor" red="0.99944839819999998" green="1" blue="0.099410504029999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,38 +44,62 @@
                                     <action selector="btnGoHome:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rkS-by-xs9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA7-tO-277" userLabel="Amsterdam">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA7-tO-277" userLabel="Amsterdam">
                                 <rect key="frame" x="124" y="28" width="64" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="9XU-iq-u9Y"/>
+                                    <constraint firstAttribute="height" constant="74" id="nyI-tE-8nq"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="amsterdam">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeQ-RW-DY6" userLabel="Athenes">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeQ-RW-DY6" userLabel="Athenes">
                                 <rect key="frame" x="255" y="49" width="89" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="EmV-5r-wbh"/>
+                                    <constraint firstAttribute="width" constant="89" id="c3k-MJ-1VO"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="athenes">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-Z1-qQ3" userLabel="London">
-                                <rect key="frame" x="420" y="28" width="67" height="74"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-Z1-qQ3" userLabel="London">
+                                <rect key="frame" x="403" y="28" width="67" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="y5H-b6-AwZ"/>
+                                    <constraint firstAttribute="width" constant="67" id="yPf-CU-iBA"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="london">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VP0-26-uK4" userLabel="Moscow">
-                                <rect key="frame" x="124" y="125" width="90" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VP0-26-uK4" userLabel="Moscow">
+                                <rect key="frame" x="118" y="125" width="90" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Nar-JR-O2I"/>
+                                    <constraint firstAttribute="height" constant="61" id="qgU-xd-Zvs"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="moscow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-5g-2eK" userLabel="Paris">
-                                <rect key="frame" x="271" y="110" width="71" height="76"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-5g-2eK" userLabel="Paris">
+                                <rect key="frame" x="265" y="110" width="71" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="f5g-pe-vb1"/>
+                                    <constraint firstAttribute="height" constant="76" id="sCD-yK-REa"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="paris">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="701-yH-Q0Q" userLabel="Vatican">
-                                <rect key="frame" x="398" y="125" width="88" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="701-yH-Q0Q" userLabel="Vatican">
+                                <rect key="frame" x="392" y="125" width="88" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="1ad-Ba-5IX"/>
+                                    <constraint firstAttribute="height" constant="61" id="bYI-nq-Icy"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="vatican">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -79,10 +107,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oiW-Z1-qQ3" firstAttribute="bottom" secondItem="MA7-tO-277" secondAttribute="bottom" id="28V-tR-qA5"/>
+                            <constraint firstItem="701-yH-Q0Q" firstAttribute="bottom" secondItem="lHL-5g-2eK" secondAttribute="bottom" id="5R0-H5-6Kp"/>
+                            <constraint firstItem="zeQ-RW-DY6" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="29" id="5pm-Wx-7Dj"/>
+                            <constraint firstItem="oiW-Z1-qQ3" firstAttribute="bottom" secondItem="zeQ-RW-DY6" secondAttribute="bottom" id="CnU-9v-KFT"/>
+                            <constraint firstItem="zeQ-RW-DY6" firstAttribute="leading" secondItem="MA7-tO-277" secondAttribute="trailing" constant="67" id="Fqg-gD-nJr"/>
+                            <constraint firstAttribute="centerX" secondItem="zeQ-RW-DY6" secondAttribute="centerX" id="U4O-re-PzZ"/>
                             <constraint firstItem="lBe-2N-6qJ" firstAttribute="top" secondItem="HB5-uK-iBz" secondAttribute="bottom" constant="15" id="VGC-Q5-vlS"/>
+                            <constraint firstItem="lHL-5g-2eK" firstAttribute="leading" secondItem="VP0-26-uK4" secondAttribute="trailing" constant="57" id="YC5-ct-dME"/>
                             <constraint firstAttribute="centerX" secondItem="HB5-uK-iBz" secondAttribute="centerX" id="YXD-4T-Tsq"/>
+                            <constraint firstItem="701-yH-Q0Q" firstAttribute="leading" secondItem="lHL-5g-2eK" secondAttribute="trailing" constant="56" id="ZyZ-Xc-SIj"/>
+                            <constraint firstItem="lHL-5g-2eK" firstAttribute="top" secondItem="zeQ-RW-DY6" secondAttribute="bottom" constant="8" id="a8w-Gd-Xvd"/>
                             <constraint firstAttribute="centerX" secondItem="lBe-2N-6qJ" secondAttribute="centerX" id="cby-AD-yGf"/>
+                            <constraint firstItem="701-yH-Q0Q" firstAttribute="centerX" secondItem="oiW-Z1-qQ3" secondAttribute="centerX" id="e0Z-ON-QFL"/>
+                            <constraint firstItem="701-yH-Q0Q" firstAttribute="bottom" secondItem="VP0-26-uK4" secondAttribute="bottom" id="erf-E4-zzy"/>
+                            <constraint firstAttribute="centerX" secondItem="lHL-5g-2eK" secondAttribute="centerX" id="gJT-G3-jdm"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="lBe-2N-6qJ" secondAttribute="bottom" constant="20" id="uZN-0l-mBL"/>
+                            <constraint firstItem="HB5-uK-iBz" firstAttribute="top" secondItem="lHL-5g-2eK" secondAttribute="bottom" constant="8" id="wSw-73-Er7"/>
                         </constraints>
                     </view>
                     <connections>
