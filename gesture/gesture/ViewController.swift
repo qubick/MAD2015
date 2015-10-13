@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBAction func handlePan(sender: UIPanGestureRecognizer) {
         let translation = sender.translationInView(view)
@@ -38,6 +38,9 @@ class ViewController: UIViewController {
         sender.view!.transform = CGAffineTransformRotate(sender.view!.transform, sender.rotation)
     }
     
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailByGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
