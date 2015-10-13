@@ -53,6 +53,9 @@
                                 <state key="normal" backgroundImage="amsterdam">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnGoAmsterdam:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rYS-PO-iZ7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeQ-RW-DY6" userLabel="Athenes">
                                 <rect key="frame" x="255" y="49" width="89" height="53"/>
@@ -63,6 +66,9 @@
                                 <state key="normal" backgroundImage="athenes">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnGoAthenes:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4LG-Na-Qf3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-Z1-qQ3" userLabel="London">
                                 <rect key="frame" x="403" y="28" width="67" height="74"/>
@@ -73,6 +79,9 @@
                                 <state key="normal" backgroundImage="london">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnGoLondon:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ee8-MC-1I7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VP0-26-uK4" userLabel="Moscow">
                                 <rect key="frame" x="118" y="125" width="90" height="61"/>
@@ -83,6 +92,9 @@
                                 <state key="normal" backgroundImage="moscow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnGoMoscow:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Dao-ra-TBU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-5g-2eK" userLabel="Paris">
                                 <rect key="frame" x="265" y="110" width="71" height="76"/>
@@ -93,6 +105,9 @@
                                 <state key="normal" backgroundImage="paris">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnGoParis:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qQl-UM-RDO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="701-yH-Q0Q" userLabel="Vatican">
                                 <rect key="frame" x="392" y="125" width="88" height="61"/>
@@ -103,6 +118,9 @@
                                 <state key="normal" backgroundImage="vatican">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnGoVatican:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="w8F-jA-LWw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83518236722430617" blue="0.12100951273177163" alpha="1" colorSpace="calibratedRGB"/>

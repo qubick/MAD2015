@@ -58,6 +58,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    @IBAction func btnGoAmsterdam(sender: UIButton) {
+    }
+    
+    @IBAction func btnGoAthenes(sender: UIButton) {
+    }
+    
+    @IBAction func btnGoLondon(sender: UIButton) {
+    }
+    
+    @IBAction func btnGoMoscow(sender: UIButton) {
+    }
+    
+    @IBAction func btnGoParis(sender: UIButton) {
+    }
+    
+    @IBAction func btnGoVatican(sender: UIButton) {
+    }
     
     @IBAction func btnGoHome(sender: UIButton) {
         
