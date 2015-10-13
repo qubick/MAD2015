@@ -16,15 +16,15 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="XPF-Qi-gWk">
-                    <rect key="frame" x="72" y="221" width="337" height="336"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="337" id="EjY-u9-ft8"/>
-                        <constraint firstAttribute="height" constant="336" id="tHf-ES-Ufv"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="fpy-oY-ZXn">
+                    <rect key="frame" x="0.0" y="308" width="480" height="128"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="European Capital City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ba-QM-1Ko">
-                    <rect key="frame" x="89" y="90" width="303" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="European Capital City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ba-QM-1Ko">
+                    <rect key="frame" x="88" y="229" width="303" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="G7g-Vb-jJq"/>
+                        <constraint firstAttribute="width" constant="303" id="tB3-Lm-vfC"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -32,11 +32,12 @@
             </subviews>
             <color key="backgroundColor" red="1" green="0.83518236720000005" blue="0.1210095127" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="centerY" secondItem="0Ba-QM-1Ko" secondAttribute="centerY" id="9m8-PK-nfG"/>
                 <constraint firstAttribute="centerX" secondItem="0Ba-QM-1Ko" secondAttribute="centerX" id="D0S-Gi-3u6"/>
                 <constraint firstAttribute="bottom" secondItem="wTI-Pw-Uiy" secondAttribute="bottom" constant="15" id="KAW-5Q-oks"/>
-                <constraint firstItem="0Ba-QM-1Ko" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="90" id="Sta-2N-jjS"/>
-                <constraint firstItem="XPF-Qi-gWk" firstAttribute="top" secondItem="0Ba-QM-1Ko" secondAttribute="bottom" constant="200" id="eA0-uI-8Py"/>
-                <constraint firstAttribute="centerX" secondItem="XPF-Qi-gWk" secondAttribute="centerX" id="mGe-Du-s0N"/>
+                <constraint firstItem="fpy-oY-ZXn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eZX-uy-fkL"/>
+                <constraint firstItem="wTI-Pw-Uiy" firstAttribute="top" secondItem="fpy-oY-ZXn" secondAttribute="bottom" constant="10" id="ocO-OZ-qKb"/>
+                <constraint firstAttribute="trailing" secondItem="fpy-oY-ZXn" secondAttribute="trailing" id="qzc-5I-owB"/>
                 <constraint firstAttribute="centerX" secondItem="wTI-Pw-Uiy" secondAttribute="centerX" id="woE-g8-Ehv"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -45,6 +46,6 @@
         </view>
     </objects>
     <resources>
-        <image name="launch" width="150" height="150"/>
+        <image name="launch" width="313" height="73"/>
     </resources>
 </document>
