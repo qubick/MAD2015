@@ -23,6 +23,7 @@
                                     <outletCollection property="gestureRecognizers" destination="CyA-6b-0ub" appends="YES" id="Dcx-jl-B3n"/>
                                     <outletCollection property="gestureRecognizers" destination="ulq-1a-0rU" appends="YES" id="H7F-ya-8kB"/>
                                     <outletCollection property="gestureRecognizers" destination="4eI-3O-70v" appends="YES" id="mXB-Hl-SGH"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ofe-RV-1FF" appends="YES" id="gI7-zK-JcF"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -51,6 +52,12 @@
                         <outlet property="delegate" destination="vXZ-lx-hvc" id="Wv8-0E-DSK"/>
                     </connections>
                 </rotationGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Ofe-RV-1FF">
+                    <connections>
+                        <action selector="handleLongPress:" destination="vXZ-lx-hvc" id="e7J-yy-dHF"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="z2w-rN-wxT"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
         </scene>
     </scenes>

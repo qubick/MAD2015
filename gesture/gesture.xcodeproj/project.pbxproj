@@ -13,6 +13,8 @@
 		0E367C1A1BCD5B5F006E16AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E367C191BCD5B5F006E16AF /* Images.xcassets */; };
 		0E367C1D1BCD5B5F006E16AF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E367C1B1BCD5B5F006E16AF /* LaunchScreen.xib */; };
 		0E367C291BCD5B5F006E16AF /* gestureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E367C281BCD5B5F006E16AF /* gestureTests.swift */; };
+		0E367C331BCD6BC2006E16AF /* Cat_Meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E367C321BCD6BC2006E16AF /* Cat_Meow.mp3 */; };
+		0E367C351BCD6C1A006E16AF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E367C341BCD6C1A006E16AF /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		0E367C221BCD5B5F006E16AF /* gestureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gestureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E367C271BCD5B5F006E16AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E367C281BCD5B5F006E16AF /* gestureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gestureTests.swift; sourceTree = "<group>"; };
+		0E367C321BCD6BC2006E16AF /* Cat_Meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cat_Meow.mp3; sourceTree = "<group>"; };
+		0E367C341BCD6C1A006E16AF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E367C351BCD6C1A006E16AF /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +64,7 @@
 		0E367C041BCD5B5F006E16AF = {
 			isa = PBXGroup;
 			children = (
+				0E367C341BCD6C1A006E16AF /* AVFoundation.framework */,
 				0E367C0F1BCD5B5F006E16AF /* gesture */,
 				0E367C251BCD5B5F006E16AF /* gestureTests */,
 				0E367C0E1BCD5B5F006E16AF /* Products */,
@@ -90,6 +96,7 @@
 		0E367C101BCD5B5F006E16AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0E367C321BCD6BC2006E16AF /* Cat_Meow.mp3 */,
 				0E367C111BCD5B5F006E16AF /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -193,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E367C181BCD5B5F006E16AF /* Main.storyboard in Resources */,
+				0E367C331BCD6BC2006E16AF /* Cat_Meow.mp3 in Resources */,
 				0E367C1D1BCD5B5F006E16AF /* LaunchScreen.xib in Resources */,
 				0E367C1A1BCD5B5F006E16AF /* Images.xcassets in Resources */,
 			);

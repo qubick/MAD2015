@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
+    var audioPlayer : AVAudioPlayer?
+    
     @IBAction func handlePan(sender: UIPanGestureRecognizer) {
         let translation = sender.translationInView(view)
         sender.view!.center = CGPoint(x: sender.view!.center.x + translation.x, y:sender.view!.center.y + translation.y)
@@ -36,6 +39,19 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBAction func handleRotate(sender: UIRotationGestureRecognizer) {
         sender.view!.transform = CGAffineTransformRotate(sender.view!.transform, sender.rotation)
+    }
+    
+    @IBAction func handleLongPress(sender: UILongPressGestureRecognizer) {
+        
+        let audioFilePath = NSBundle.mainBundle().pathForResource("Cat_Meow", ofType: "mp3")
+        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
+        
+        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
+        
+        if audioPlayer != nil {
+            audioPlayer!.play()
+        }
+        
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailByGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
