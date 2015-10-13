@@ -59,21 +59,81 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func btnGoAmsterdam(sender: UIButton) {
+        let newlocation = CLLocationCoordinate2D(latitude: 52.370216, longitude: 4.895168)
+        let region = MKCoordinateRegionMake(newlocation, span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = newlocation
+        annotation.title = "Amsterdam"
+        annotation.subtitle =  "Netherland"
+        mapView.addAnnotation(annotation)
     }
     
     @IBAction func btnGoAthenes(sender: UIButton) {
+        let newlocation = CLLocationCoordinate2D(latitude: 37.983917, longitude: 23.729360)
+        let region = MKCoordinateRegionMake(newlocation, span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = newlocation
+        annotation.title = "Athenes"
+        annotation.subtitle =  "Greece"
+        mapView.addAnnotation(annotation)
     }
     
     @IBAction func btnGoLondon(sender: UIButton) {
+        let newlocation = CLLocationCoordinate2D(latitude: 51.507351, longitude: -0.127758)
+        let region = MKCoordinateRegionMake(newlocation, span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = newlocation
+        annotation.title = "London"
+        annotation.subtitle =  "United Kingdom"
+        mapView.addAnnotation(annotation)
     }
     
     @IBAction func btnGoMoscow(sender: UIButton) {
+        let newlocation = CLLocationCoordinate2D(latitude: 55.755826, longitude: 37.617300)
+        let region = MKCoordinateRegionMake(newlocation, span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = newlocation
+        annotation.title = "Moscow"
+        annotation.subtitle =  "Russia"
+        mapView.addAnnotation(annotation)
     }
     
     @IBAction func btnGoParis(sender: UIButton) {
+        let newlocation = CLLocationCoordinate2D(latitude: 48.856614, longitude: 2.352222)
+        let region = MKCoordinateRegionMake(newlocation, span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = newlocation
+        annotation.title = "Paris"
+        annotation.subtitle =  "France"
+        mapView.addAnnotation(annotation)
     }
     
     @IBAction func btnGoVatican(sender: UIButton) {
+        let newlocation = CLLocationCoordinate2D(latitude: 41.902916, longitude: 12.453389)
+        let region = MKCoordinateRegionMake(newlocation, span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = newlocation
+        annotation.title = "Vatican"
+        annotation.subtitle =  "Vatican"
+        mapView.addAnnotation(annotation)
     }
     
     @IBAction func btnGoHome(sender: UIButton) {
