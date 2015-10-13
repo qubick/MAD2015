@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>BC69EF88-F26C-4600-9C04-7552277EA4C4</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>lab5</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>095C03ABA1B9218034850B0919A3868236E6FDD7</key>
 		<string>https://github.com/qubick/MAD2015</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>lab5/lab5.xcodeproj/project.xcworkspace</string>
+	<string>lab5/lab5.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>095C03ABA1B9218034850B0919A3868236E6FDD7</key>

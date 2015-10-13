@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,16 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lBe-2N-6qJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB5-uK-iBz">
-                                <rect key="frame" x="221" y="550" width="158" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lBe-2N-6qJ">
+                                <rect key="frame" x="124" y="239" width="363" height="341"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="4KH-7b-eAE"/>
-                                    <constraint firstAttribute="height" constant="30" id="hXf-Bs-4Zu"/>
+                                    <constraint firstAttribute="height" constant="341" id="1g5-UQ-6JN"/>
+                                    <constraint firstAttribute="width" constant="363" id="7Ip-Dz-myD"/>
+                                    <constraint firstAttribute="width" constant="350" id="HIv-MX-RSP"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7Ip-Dz-myD"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB5-uK-iBz">
+                                <rect key="frame" x="221" y="194" width="158" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Go to my home">
                                     <color key="titleColor" red="0.99944839819999998" green="1" blue="0.099410504029999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -35,15 +40,49 @@
                                     <action selector="btnGoHome:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rkS-by-xs9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA7-tO-277" userLabel="Amsterdam">
+                                <rect key="frame" x="124" y="28" width="64" height="74"/>
+                                <state key="normal" backgroundImage="amsterdam">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeQ-RW-DY6" userLabel="Athenes">
+                                <rect key="frame" x="255" y="49" width="89" height="53"/>
+                                <state key="normal" backgroundImage="athenes">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-Z1-qQ3" userLabel="London">
+                                <rect key="frame" x="420" y="28" width="67" height="74"/>
+                                <state key="normal" backgroundImage="london">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VP0-26-uK4" userLabel="Moscow">
+                                <rect key="frame" x="124" y="125" width="90" height="61"/>
+                                <state key="normal" backgroundImage="moscow">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-5g-2eK" userLabel="Paris">
+                                <rect key="frame" x="271" y="110" width="71" height="76"/>
+                                <state key="normal" backgroundImage="paris">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="701-yH-Q0Q" userLabel="Vatican">
+                                <rect key="frame" x="398" y="125" width="88" height="61"/>
+                                <state key="normal" backgroundImage="vatican">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="HB5-uK-iBz" secondAttribute="centerX" id="IRT-MK-bpE"/>
-                            <constraint firstItem="lBe-2N-6qJ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Jqb-NO-uB1"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="lBe-2N-6qJ" secondAttribute="bottom" id="Qun-u7-3eG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lBe-2N-6qJ" secondAttribute="trailing" constant="-16" id="XpF-AF-Oug"/>
-                            <constraint firstItem="lBe-2N-6qJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="b6X-MU-FRr"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HB5-uK-iBz" secondAttribute="bottom" constant="20" id="knb-u1-FVm"/>
+                            <constraint firstItem="lBe-2N-6qJ" firstAttribute="top" secondItem="HB5-uK-iBz" secondAttribute="bottom" constant="15" id="VGC-Q5-vlS"/>
+                            <constraint firstAttribute="centerX" secondItem="HB5-uK-iBz" secondAttribute="centerX" id="YXD-4T-Tsq"/>
+                            <constraint firstAttribute="centerX" secondItem="lBe-2N-6qJ" secondAttribute="centerX" id="cby-AD-yGf"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="lBe-2N-6qJ" secondAttribute="bottom" constant="20" id="uZN-0l-mBL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -54,4 +93,12 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="amsterdam" width="34" height="43"/>
+        <image name="athenes" width="37" height="32"/>
+        <image name="london" width="28" height="46"/>
+        <image name="moscow" width="35" height="42"/>
+        <image name="paris" width="29" height="44"/>
+        <image name="vatican" width="33" height="36"/>
+    </resources>
 </document>
