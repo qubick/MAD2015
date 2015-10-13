@@ -16,14 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="octocat" translatesAutoresizingMaskIntoConstraints="NO" id="E7i-cQ-wpU">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="octocat" translatesAutoresizingMaskIntoConstraints="NO" id="E7i-cQ-wpU">
                                 <rect key="frame" x="55" y="43" width="224" height="224"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="CyA-6b-0ub" appends="YES" id="Dcx-jl-B3n"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="CyA-6b-0ub">
+                    <connections>
+                        <action selector="handlePan:" destination="vXZ-lx-hvc" id="rdX-fP-jLc"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>
