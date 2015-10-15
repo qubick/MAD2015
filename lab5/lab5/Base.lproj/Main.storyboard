@@ -19,7 +19,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lBe-2N-6qJ">
                                 <rect key="frame" x="141" y="239" width="314" height="341"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="341" id="1g5-UQ-6JN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="314" id="hpL-5P-iPY"/>
                                 </constraints>
                             </mapView>
@@ -131,6 +130,7 @@
                             <constraint firstItem="701-yH-Q0Q" firstAttribute="bottom" secondItem="VP0-26-uK4" secondAttribute="bottom" constant="1" id="VY2-KP-zD0"/>
                             <constraint firstAttribute="centerX" secondItem="lBe-2N-6qJ" secondAttribute="centerX" id="WeS-07-9QB"/>
                             <constraint firstAttribute="centerX" secondItem="zeQ-RW-DY6" secondAttribute="centerX" id="cFw-dR-8h6"/>
+                            <constraint firstItem="HB5-uK-iBz" firstAttribute="top" secondItem="lHL-5g-2eK" secondAttribute="bottom" constant="20" id="cqe-BS-rYS"/>
                             <constraint firstItem="zeQ-RW-DY6" firstAttribute="bottom" secondItem="MA7-tO-277" secondAttribute="bottom" id="drm-wA-FjN"/>
                             <constraint firstAttribute="centerX" secondItem="lHL-5g-2eK" secondAttribute="centerX" id="hvs-sL-Cy7"/>
                             <constraint firstItem="zeQ-RW-DY6" firstAttribute="bottom" secondItem="oiW-Z1-qQ3" secondAttribute="bottom" id="lge-nN-6YN"/>
@@ -138,6 +138,11 @@
                             <constraint firstItem="lBe-2N-6qJ" firstAttribute="top" secondItem="HB5-uK-iBz" secondAttribute="bottom" constant="25" id="sye-qL-iQQ"/>
                             <constraint firstItem="oiW-Z1-qQ3" firstAttribute="centerX" secondItem="701-yH-Q0Q" secondAttribute="centerX" id="yMb-YE-Mig"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LmA-eR-uhL"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="lBe-2N-6qJ" id="MVM-a6-R1T"/>
