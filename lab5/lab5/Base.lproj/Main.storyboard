@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="314" id="hpL-5P-iPY"/>
                                 </constraints>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB5-uK-iBz">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB5-uK-iBz">
                                 <rect key="frame" x="221" y="184" width="158" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -64,7 +64,7 @@
                                     <action selector="btnGoAthenes:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4LG-Na-Qf3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VP0-26-uK4" userLabel="Moscow">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VP0-26-uK4" userLabel="Moscow">
                                 <rect key="frame" x="141" y="97" width="90" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="Nar-JR-O2I"/>
@@ -77,7 +77,7 @@
                                     <action selector="btnGoMoscow:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Dao-ra-TBU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-5g-2eK" userLabel="Paris">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-5g-2eK" userLabel="Paris">
                                 <rect key="frame" x="265" y="83" width="71" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="f5g-pe-vb1"/>
@@ -103,7 +103,7 @@
                                     <action selector="btnGoLondon:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ee8-MC-1I7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="701-yH-Q0Q" userLabel="Vatican">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="701-yH-Q0Q" userLabel="Vatican">
                                 <rect key="frame" x="367" y="98" width="88" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="1ad-Ba-5IX"/>
@@ -123,6 +123,7 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="lBe-2N-6qJ" secondAttribute="bottom" constant="20" id="AqI-eU-q3a"/>
                             <constraint firstItem="lHL-5g-2eK" firstAttribute="leading" secondItem="VP0-26-uK4" secondAttribute="trailing" constant="34" id="EBF-Hq-TBK"/>
                             <constraint firstItem="HB5-uK-iBz" firstAttribute="top" secondItem="701-yH-Q0Q" secondAttribute="bottom" constant="25" id="LmA-eR-uhL"/>
+                            <constraint firstItem="zeQ-RW-DY6" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="NLv-On-hBE"/>
                             <constraint firstItem="zeQ-RW-DY6" firstAttribute="leading" secondItem="MA7-tO-277" secondAttribute="trailing" constant="44" id="Oz4-lF-COj"/>
                             <constraint firstItem="lHL-5g-2eK" firstAttribute="top" secondItem="zeQ-RW-DY6" secondAttribute="bottom" constant="15" id="QFa-Sb-65O"/>
                             <constraint firstAttribute="centerX" secondItem="HB5-uK-iBz" secondAttribute="centerX" id="RDT-mh-bpP"/>
