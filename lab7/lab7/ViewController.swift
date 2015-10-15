@@ -10,6 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var btnRecord: UIButton!
+    @IBOutlet weak var btnPlay: UIButton!
+    @IBOutlet weak var btnStop: UIButton!
+    
+    @IBAction func recordAudio(sender: UIButton) {
+    }
+    
+    @IBAction func playAudio(sender: UIButton) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

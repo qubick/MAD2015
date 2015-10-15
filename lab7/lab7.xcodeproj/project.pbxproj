@@ -13,6 +13,7 @@
 		0E0F47A91BCFFE6C00434ADF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E0F47A81BCFFE6C00434ADF /* Images.xcassets */; };
 		0E0F47AC1BCFFE6C00434ADF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E0F47AA1BCFFE6C00434ADF /* LaunchScreen.xib */; };
 		0E0F47B81BCFFE6C00434ADF /* lab7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F47B71BCFFE6C00434ADF /* lab7Tests.swift */; };
+		0E0F47C21BCFFEDC00434ADF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0F47C11BCFFEDC00434ADF /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		0E0F47B11BCFFE6C00434ADF /* lab7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lab7Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0F47B61BCFFE6C00434ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E0F47B71BCFFE6C00434ADF /* lab7Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lab7Tests.swift; sourceTree = "<group>"; };
+		0E0F47C11BCFFEDC00434ADF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0F47C21BCFFEDC00434ADF /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		0E0F47931BCFFE6C00434ADF = {
 			isa = PBXGroup;
 			children = (
+				0E0F47C11BCFFEDC00434ADF /* AVFoundation.framework */,
 				0E0F479E1BCFFE6C00434ADF /* lab7 */,
 				0E0F47B41BCFFE6C00434ADF /* lab7Tests */,
 				0E0F479D1BCFFE6C00434ADF /* Products */,
