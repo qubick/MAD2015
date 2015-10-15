@@ -16,18 +16,46 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var btnStop: UIButton!
     
-    var audioPlay: AVAudioPlayer?
+    var audioPlayer: AVAudioPlayer?
     var audioRecorder: AVAudioRecorder?
     let fileName = "audio.caf"
     
     
     @IBAction func recordAudio(sender: UIButton) {
+        if audioRecorder?.record() == false {
+            btnPlay.enabled = false
+            btnStop.enabled = true
+            audioRecorder?.record()
+        }
     }
     
     @IBAction func playAudio(sender: UIButton) {
+        if audioRecorder?.recording == false {
+            btnStop.enabled = true
+            btnRecord.enabled = false
+            var error: NSError?
+            
+            audioPlayer = AVAudioPlayer(contentsOfURL: audioRecorder?.url, error: &error)
+            
+            if let err = error {
+                println("AVAudioPlayer error: \(err.localizedDescription)")
+            } else {
+                audioPlayer?.delegate = self
+                audioPlayer?.play()
+            }
+        }
     }
     
     @IBAction func stopAudio(sender: UIButton) {
+        btnStop.enabled = false
+        btnPlay.enabled = true
+        btnRecord.enabled = true
+        
+        if audioRecorder?.recording == true {
+            audioRecorder?.stop()
+        } else {
+            audioPlayer?.stop()
+        }
     }
     
     override func viewDidLoad() {
