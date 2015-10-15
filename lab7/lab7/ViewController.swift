@@ -22,7 +22,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     
     
     @IBAction func recordAudio(sender: UIButton) {
-        if audioRecorder?.record() == false {
+        
+        if audioRecorder?.recording == false {
             btnPlay.enabled = false
             btnStop.enabled = true
             audioRecorder?.record()
@@ -64,7 +65,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         btnStop.enabled = false;
         
     
-        let dirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentationDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let dirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         let docDir = dirPath[0] as! String
         let audioFilePath = docDir.stringByAppendingPathComponent(fileName)
         let audioFileURL = NSURL(fileURLWithPath: audioFilePath)
