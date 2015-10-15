@@ -1,1 +1,3 @@
 apple_developer_*
+*.playground
+*.DS_Store
