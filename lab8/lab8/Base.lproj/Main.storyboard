@@ -27,7 +27,11 @@
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="7KE-WU-QRg"/>
-                                    <barButtonItem title="Info" id="EjQ-tA-vS4"/>
+                                    <barButtonItem title="Info" id="EjQ-tA-vS4">
+                                        <connections>
+                                            <segue destination="joK-au-JVf" kind="presentation" identifier="favInfo" modalTransitionStyle="coverVertical" id="S4Y-af-Szg"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -41,6 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="655" y="418"/>
         </scene>
         <!--Scene2 View Controller-->
         <scene sceneID="UiB-xp-hLW">
