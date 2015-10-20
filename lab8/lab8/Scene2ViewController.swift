@@ -13,6 +13,20 @@ class Scene2ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userArt: UITextField!
     @IBOutlet weak var userArtist: UITextField!
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "doneFavs" {
+        
+            var scene1ViewController:ViewController = segue.destinationViewController as! ViewController
+            
+            if userArtist.text.isEmpty == false {
+                scene1ViewController.user.favArtist = userArtist.text
+            }
+            
+            if userArt.text.isEmpty == false {
+                scene1ViewController.user.favArt = userArt.text
+            }
+        }
+    }
     override func viewDidLoad() {
         
         userArt.delegate = self

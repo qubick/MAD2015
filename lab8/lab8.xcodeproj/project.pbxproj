@@ -14,6 +14,7 @@
 		059D19F51BD696440075E45E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 059D19F31BD696440075E45E /* LaunchScreen.xib */; };
 		059D1A011BD696440075E45E /* lab8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D1A001BD696440075E45E /* lab8Tests.swift */; };
 		059D1A0B1BD6985F0075E45E /* Scene2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D1A0A1BD6985F0075E45E /* Scene2ViewController.swift */; };
+		059D1A0D1BD6A2DB0075E45E /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D1A0C1BD6A2DB0075E45E /* Favorite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		059D19FF1BD696440075E45E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		059D1A001BD696440075E45E /* lab8Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lab8Tests.swift; sourceTree = "<group>"; };
 		059D1A0A1BD6985F0075E45E /* Scene2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene2ViewController.swift; sourceTree = "<group>"; };
+		059D1A0C1BD6A2DB0075E45E /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorite.swift; path = ../Favorite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				059D19EA1BD696440075E45E /* AppDelegate.swift */,
 				059D19EC1BD696440075E45E /* ViewController.swift */,
 				059D1A0A1BD6985F0075E45E /* Scene2ViewController.swift */,
+				059D1A0C1BD6A2DB0075E45E /* Favorite.swift */,
 				059D19EE1BD696440075E45E /* Main.storyboard */,
 				059D19F11BD696440075E45E /* Images.xcassets */,
 				059D19F31BD696440075E45E /* LaunchScreen.xib */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				059D19ED1BD696440075E45E /* ViewController.swift in Sources */,
+				059D1A0D1BD6A2DB0075E45E /* Favorite.swift in Sources */,
 				059D19EB1BD696440075E45E /* AppDelegate.swift in Sources */,
 				059D1A0B1BD6985F0075E45E /* Scene2ViewController.swift in Sources */,
 			);

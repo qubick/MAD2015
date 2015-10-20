@@ -14,8 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var imgArt: UIImageView!
     
+    var user = Favorite()
+    
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue){
+        titleLabel.text = user.favArt
+        artistLabel.text = user.favArtist
     }
     
     override func viewDidLoad() {
