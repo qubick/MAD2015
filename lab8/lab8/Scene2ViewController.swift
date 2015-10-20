@@ -8,14 +8,26 @@
 
 import UIKit
 
-class Scene2ViewController: UIViewController {
+class Scene2ViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var userArt: UITextField!
+    @IBOutlet weak var userArtist: UITextField!
+    
     override func viewDidLoad() {
+        
+        userArt.delegate = self
+        userArtist.delegate = self
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

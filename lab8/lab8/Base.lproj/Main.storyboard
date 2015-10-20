@@ -17,9 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdE-WF-da0">
-                                <rect key="frame" x="279" y="54" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdE-WF-da0">
+                                <rect key="frame" x="283" y="49" width="34" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -27,13 +27,28 @@
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="7KE-WU-QRg"/>
-                                    <barButtonItem title="Info" id="EjQ-tA-vS4">
+                                    <barButtonItem title="Info" style="plain" id="EjQ-tA-vS4">
                                         <connections>
                                             <segue destination="joK-au-JVf" kind="presentation" identifier="favInfo" modalTransitionStyle="coverVertical" id="S4Y-af-Szg"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SVz-a1-Dsr">
+                                <rect key="frame" x="180" y="88" width="261" height="306"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3U-Gs-HNX">
+                                <rect key="frame" x="289" y="419" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRM-G8-02A">
+                                <rect key="frame" x="289" y="461" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -42,6 +57,11 @@
                             <constraint firstItem="OrT-dH-fNo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="nVO-Be-vBe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="artistLabel" destination="hRM-G8-02A" id="79v-Va-Iie"/>
+                        <outlet property="imgArt" destination="SVz-a1-Dsr" id="7Xr-Cv-r9g"/>
+                        <outlet property="titleLabel" destination="T3U-Gs-HNX" id="lld-9D-n29"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,9 +79,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Favorite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e86-Kr-gg8">
-                                <rect key="frame" x="279" y="51" width="90" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My Favorites" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e86-Kr-gg8">
+                                <rect key="frame" x="251" y="51" width="99" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -69,19 +89,65 @@
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tox-1N-tnN"/>
-                                    <barButtonItem title="Done" id="TQI-rZ-e8O"/>
+                                    <barButtonItem title="Done" style="plain" id="TQI-rZ-e8O">
+                                        <connections>
+                                            <segue destination="Ydi-9G-CND" kind="unwind" unwindAction="unwindSegue:" id="OF9-DH-fdj"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Art" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df8-hd-8rn">
+                                <rect key="frame" x="161" y="128" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eo9-X3-pwm">
+                                <rect key="frame" x="301" y="119" width="202" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="5GD-Mj-YS2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRj-MT-O3v">
+                                <rect key="frame" x="143" y="190" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJw-vt-oeh">
+                                <rect key="frame" x="301" y="181" width="202" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="0WT-KT-GzK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eo9-X3-pwm" firstAttribute="top" secondItem="e86-Kr-gg8" secondAttribute="bottom" constant="44" id="68Z-k8-SBu"/>
                             <constraint firstItem="BE3-aO-Vwb" firstAttribute="top" secondItem="kkg-mF-xrs" secondAttribute="bottom" id="GZN-Kn-yBq"/>
+                            <constraint firstAttribute="centerX" secondItem="e86-Kr-gg8" secondAttribute="centerX" id="IUQ-EC-szt"/>
+                            <constraint firstItem="YJw-vt-oeh" firstAttribute="leading" secondItem="qRj-MT-O3v" secondAttribute="trailing" constant="51" id="LMU-iL-ThO"/>
+                            <constraint firstItem="e86-Kr-gg8" firstAttribute="top" secondItem="nKd-OJ-XBw" secondAttribute="bottom" constant="31" id="N7f-u8-UAL"/>
+                            <constraint firstItem="df8-hd-8rn" firstAttribute="trailing" secondItem="qRj-MT-O3v" secondAttribute="trailing" id="PKv-H8-daf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kkg-mF-xrs" secondAttribute="trailing" constant="-16" id="TBJ-tZ-qDi"/>
                             <constraint firstItem="kkg-mF-xrs" firstAttribute="leading" secondItem="c32-Ig-nbt" secondAttribute="leadingMargin" constant="-16" id="TlH-g1-k8R"/>
+                            <constraint firstItem="eo9-X3-pwm" firstAttribute="leading" secondItem="df8-hd-8rn" secondAttribute="trailing" constant="51" id="XD0-Rq-tcG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eo9-X3-pwm" secondAttribute="trailing" constant="81" id="dcP-AG-2Fm"/>
+                            <constraint firstItem="df8-hd-8rn" firstAttribute="top" secondItem="nKd-OJ-XBw" secondAttribute="bottom" constant="108" id="iM5-ir-wNm"/>
+                            <constraint firstItem="qRj-MT-O3v" firstAttribute="top" secondItem="df8-hd-8rn" secondAttribute="bottom" constant="41" id="mh8-T4-9Du"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userArt" destination="eo9-X3-pwm" id="Ueh-8d-Oc1"/>
+                        <outlet property="userArtist" destination="YJw-vt-oeh" id="JG4-if-i4I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmV-0w-ukB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ydi-9G-CND" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1355" y="418"/>
         </scene>
