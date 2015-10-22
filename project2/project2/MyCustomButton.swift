@@ -12,9 +12,9 @@ import UIKit
 class MyWhiteButton: UIButton {
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
-        self.layer.cornerRadius = 2.0;
+        self.layer.cornerRadius = 5.0
         self.layer.borderColor = UIColor.blackColor().CGColor
-        self.layer.borderWidth = 1.5
+        self.layer.borderWidth = 1.0
         self.backgroundColor = UIColor.whiteColor()
         self.tintColor = UIColor.whiteColor()
         
@@ -24,7 +24,7 @@ class MyWhiteButton: UIButton {
 class MyBlackButton: UIButton {
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
-        self.layer.cornerRadius = 2.0;
+        self.layer.cornerRadius = 6.0
         self.layer.borderColor = UIColor.blackColor().CGColor
         self.layer.borderWidth = 1.5
         self.backgroundColor = UIColor.blackColor()
