@@ -29,6 +29,7 @@
 		0E06B0D91BD9443300568304 /* g-5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E06B0C41BD9443300568304 /* g-5.mp3 */; };
 		0E06B0DA1BD9443300568304 /* g4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E06B0C51BD9443300568304 /* g4.mp3 */; };
 		0E06B0DB1BD9443300568304 /* g5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E06B0C61BD9443300568304 /* g5.mp3 */; };
+		0E06B0DD1BD949FF00568304 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E06B0DC1BD949FF00568304 /* AVFoundation.framework */; };
 		0E6A70AC1BD5DAEB0042122F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A70AB1BD5DAEB0042122F /* AppDelegate.swift */; };
 		0E6A70AE1BD5DAEB0042122F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A70AD1BD5DAEB0042122F /* MasterViewController.swift */; };
 		0E6A70B01BD5DAEB0042122F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A70AF1BD5DAEB0042122F /* DetailViewController.swift */; };
@@ -72,6 +73,7 @@
 		0E06B0C41BD9443300568304 /* g-5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "g-5.mp3"; sourceTree = "<group>"; };
 		0E06B0C51BD9443300568304 /* g4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = g4.mp3; sourceTree = "<group>"; };
 		0E06B0C61BD9443300568304 /* g5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = g5.mp3; sourceTree = "<group>"; };
+		0E06B0DC1BD949FF00568304 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0E6A70A61BD5DAEB0042122F /* project2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6A70AA1BD5DAEB0042122F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E6A70AB1BD5DAEB0042122F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E06B0DD1BD949FF00568304 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +110,7 @@
 		0E6A709D1BD5DAEB0042122F = {
 			isa = PBXGroup;
 			children = (
+				0E06B0DC1BD949FF00568304 /* AVFoundation.framework */,
 				0E6A70A81BD5DAEB0042122F /* project2 */,
 				0E6A70C01BD5DAEB0042122F /* project2Tests */,
 				0E6A70A71BD5DAEB0042122F /* Products */,

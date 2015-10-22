@@ -7,32 +7,40 @@
 //
 
 import UIKit
+import AVFoundation
+
 
 class DetailViewController: UIViewController {
 
+    var audioPlayer: AVAudioPlayer?
+    
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
     @IBAction func btnC4(sender: UIButton) {
+        let audioFilePath = NSBundle.mainBundle().pathForResource("c4", ofType: "mp3")
+        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
+        
+        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
+        
+        if audioPlayer != nil {
+            audioPlayer!.play()
+        }
+        
     }
-
     @IBAction func btnC4sharp(sender: UIButton) {
     }
-    
     @IBAction func btnD4(sender: UIButton) {
     }
-    
     @IBAction func btnD4sharp(sender: UIButton) {
     }
     @IBAction func btnE4(sender: UIButton) {
     }
-    
     @IBAction func btnF4(sender: UIButton) {
     }
     @IBAction func btnF4sharp(sender: UIButton) {
     }
     @IBAction func btnG4(sender: UIButton) {
     }
-    
     @IBAction func btnG4sharp(sender: AnyObject) {
     }
     @IBAction func btnG5sharp(sender: AnyObject) {
@@ -45,16 +53,12 @@ class DetailViewController: UIViewController {
     }
     @IBAction func btnC5(sender: AnyObject) {
     }
-    
     @IBAction func btnC5sharp(sender: AnyObject) {
     }
-    
     @IBAction func btnD5(sender: AnyObject) {
     }
-    
     @IBAction func btnD5sharp(sender: AnyObject) {
     }
-    
     @IBAction func btnE5(sender: AnyObject) {
     }
     @IBAction func btnF5(sender: AnyObject) {
