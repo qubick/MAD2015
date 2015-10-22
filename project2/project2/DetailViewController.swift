@@ -12,7 +12,69 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
+    @IBAction func btnC4(sender: UIButton) {
+    }
 
+    @IBAction func btnC4sharp(sender: UIButton) {
+    }
+    
+    @IBAction func btnD4(sender: UIButton) {
+    }
+    
+    @IBAction func btnD4sharp(sender: UIButton) {
+    }
+    @IBAction func btnE4(sender: UIButton) {
+    }
+    
+    @IBAction func btnF4(sender: UIButton) {
+    }
+    @IBAction func btnF4sharp(sender: UIButton) {
+    }
+    @IBAction func btnG4(sender: UIButton) {
+    }
+    
+    @IBAction func btnG4sharp(sender: AnyObject) {
+    }
+    @IBAction func btnG5sharp(sender: AnyObject) {
+    }
+    @IBAction func btnA4(sender: AnyObject) {
+    }
+    @IBAction func btnA4sharp(sender: AnyObject) {
+    }
+    @IBAction func btnB4(sender: AnyObject) {
+    }
+    @IBAction func btnC5(sender: AnyObject) {
+    }
+    
+    @IBAction func btnC5sharp(sender: AnyObject) {
+    }
+    
+    @IBAction func btnD5(sender: AnyObject) {
+    }
+    
+    @IBAction func btnD5sharp(sender: AnyObject) {
+    }
+    
+    @IBAction func btnE5(sender: AnyObject) {
+    }
+    @IBAction func btnF5(sender: AnyObject) {
+    }
+    @IBAction func btnF5shapr(sender: AnyObject) {
+    }
+    
+    @IBAction func btnG5(sender: AnyObject) {
+    }
+    
+    @IBAction func btnA5(sender: AnyObject) {
+    }
+    @IBAction func btnA5sharp(sender: AnyObject) {
+    }
+    
+    @IBAction func btnB5(sender: AnyObject) {
+    }
+    
+
+    @IBOutlet weak var btnC5: MyWhiteButton!
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
