@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
     @IBAction func btnC4(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("c4", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("c4", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnC4sharp(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("c-4", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("c-4", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -35,7 +35,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnD4(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("d4", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("d4", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -44,10 +44,17 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnD4sharp(sender: UIButton) {
+        let audioFilePath = NSBundle.mainBundle().pathForResource("d-4", ofType: "wav")
+        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
+        
+        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
+        if audioPlayer != nil {
+            audioPlayer!.play()
+        }
         
     }
     @IBAction func btnE4(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("e4", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("e4", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -56,10 +63,17 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnF4(sender: UIButton) {
+        let audioFilePath = NSBundle.mainBundle().pathForResource("f4", ofType: "wav")
+        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
+        
+        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
+        if audioPlayer != nil {
+            audioPlayer!.play()
+        }
         
     }
     @IBAction func btnF4sharp(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("f-4", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("f-4", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -68,7 +82,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnG4(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("g4", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("g4", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -77,7 +91,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnG4sharp(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("g-4", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("g-4", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -86,7 +100,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnA4(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("a4", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("a4", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -95,9 +109,16 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnA4sharp(sender: AnyObject) {
+        let audioFilePath = NSBundle.mainBundle().pathForResource("a-4", ofType: "wav")
+        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
+        
+        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
+        if audioPlayer != nil {
+            audioPlayer!.play()
+        }
     }
     @IBAction func btnB4(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("b4", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("b4", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -106,7 +127,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnC5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("c5", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("c5", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -115,7 +136,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnC5sharp(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("c-5", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("c-5", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -124,7 +145,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnD5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("d5", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("d5", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -133,7 +154,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnD5sharp(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("d-5", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("d-5", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -142,7 +163,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnE5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("e5", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("e5", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -151,7 +172,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnF5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("f5", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("f5", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -160,7 +181,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnF5shapr(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("f-5", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("f-5", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -170,7 +191,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func btnG5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("g5", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("g5", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -180,7 +201,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func btnG5sharp(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("g-5", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("g-5", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -189,7 +210,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnA5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("a5", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("a5", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -198,7 +219,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnA5sharp(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("a-5", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("a-5", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -207,7 +228,7 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnB5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("b5", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("b5", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -216,13 +237,13 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func btnC6(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("c6", ofType: "mp3")
+        /*let audioFilePath = NSBundle.mainBundle().pathForResource("c6", ofType: "mp3")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
         if audioPlayer != nil {
             audioPlayer!.play()
-        }
+        }*/
     }
 
     @IBOutlet weak var btnC5: MyWhiteButton!
