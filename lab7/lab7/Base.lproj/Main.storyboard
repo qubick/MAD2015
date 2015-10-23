@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOx-5a-DKB">
-                                <rect key="frame" x="130" y="165" width="114" height="117"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOx-5a-DKB">
+                                <rect key="frame" x="149" y="74" width="55" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="117" id="3Cb-ca-4z6"/>
-                                    <constraint firstAttribute="width" constant="114" id="Wbl-Lh-UCg"/>
+                                    <constraint firstAttribute="width" constant="55" id="fIk-nK-Z0Q"/>
+                                    <constraint firstAttribute="height" constant="54" id="lEo-NZ-4f7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" backgroundImage="record">
@@ -31,11 +32,11 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1DP-TA-dsJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z05-xg-Gx6">
-                                <rect key="frame" x="255" y="167" width="113" height="117"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z05-xg-Gx6">
+                                <rect key="frame" x="274" y="75" width="53" height="52"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="113" id="DCJ-PI-yI3"/>
-                                    <constraint firstAttribute="height" constant="117" id="x7B-do-hbW"/>
+                                    <constraint firstAttribute="height" constant="52" id="9Y9-3K-ISf"/>
+                                    <constraint firstAttribute="width" constant="53" id="RzK-mx-L7d"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" backgroundImage="play">
@@ -46,11 +47,11 @@
                                     <action selector="playAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fc5-Qz-EBE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tg-3a-n0S">
-                                <rect key="frame" x="383" y="169" width="116" height="112"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tg-3a-n0S">
+                                <rect key="frame" x="403" y="76" width="56" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="116" id="DL6-OA-Kwc"/>
-                                    <constraint firstAttribute="height" constant="112" id="zGp-aa-64F"/>
+                                    <constraint firstAttribute="width" constant="56" id="JZz-c3-4RV"/>
+                                    <constraint firstAttribute="height" constant="51" id="mlS-Mi-iX9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" backgroundImage="stop">
@@ -61,22 +62,53 @@
                                     <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DsY-5Z-b1H"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eU8-J1-UiZ">
+                                <rect key="frame" x="134" y="144" width="84" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Stop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grr-vQ-PCA">
+                                <rect key="frame" x="397" y="144" width="69" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2B-px-f7k">
+                                <rect key="frame" x="275" y="141" width="50" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LhV-K3-AiV">
+                                <rect key="frame" x="134" y="189" width="332" height="373"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="IOx-5a-DKB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="145" id="BWS-s2-sDx"/>
-                            <constraint firstItem="4tg-3a-n0S" firstAttribute="leading" secondItem="z05-xg-Gx6" secondAttribute="trailing" constant="15" id="Kgk-eC-cFf"/>
-                            <constraint firstItem="4tg-3a-n0S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="149" id="PI7-lu-PRc"/>
-                            <constraint firstAttribute="centerX" secondItem="z05-xg-Gx6" secondAttribute="centerX" id="RNk-Pm-Qot"/>
-                            <constraint firstItem="z05-xg-Gx6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="147" id="VpX-IX-gda"/>
-                            <constraint firstItem="z05-xg-Gx6" firstAttribute="leading" secondItem="IOx-5a-DKB" secondAttribute="trailing" constant="11" id="iTl-cG-NTi"/>
-                            <constraint firstItem="4tg-3a-n0S" firstAttribute="leading" secondItem="z05-xg-Gx6" secondAttribute="trailing" constant="15" id="tga-no-fJT"/>
+                            <constraint firstItem="e2B-px-f7k" firstAttribute="centerX" secondItem="z05-xg-Gx6" secondAttribute="centerX" id="1ty-QN-3RW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LhV-K3-AiV" secondAttribute="trailing" constant="40" id="30D-4k-9UZ"/>
+                            <constraint firstItem="eU8-J1-UiZ" firstAttribute="top" secondItem="grr-vQ-PCA" secondAttribute="top" id="5T2-3Y-9fa"/>
+                            <constraint firstItem="IOx-5a-DKB" firstAttribute="centerY" secondItem="4tg-3a-n0S" secondAttribute="centerY" id="6bn-Re-sLJ"/>
+                            <constraint firstItem="LhV-K3-AiV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="AaI-Oj-bFG"/>
+                            <constraint firstItem="IOx-5a-DKB" firstAttribute="centerX" secondItem="eU8-J1-UiZ" secondAttribute="centerX" id="IGa-bW-5AT"/>
+                            <constraint firstItem="eU8-J1-UiZ" firstAttribute="top" secondItem="e2B-px-f7k" secondAttribute="top" id="Lf2-z6-bmf"/>
+                            <constraint firstItem="z05-xg-Gx6" firstAttribute="leading" secondItem="IOx-5a-DKB" secondAttribute="trailing" constant="70" id="MLY-Ra-xVs"/>
+                            <constraint firstItem="LhV-K3-AiV" firstAttribute="top" secondItem="e2B-px-f7k" secondAttribute="bottom" constant="100" id="Nah-wv-zXB"/>
+                            <constraint firstAttribute="centerX" secondItem="z05-xg-Gx6" secondAttribute="centerX" id="PGz-HM-wvD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LhV-K3-AiV" secondAttribute="bottom" constant="38" id="Qaw-Hk-MKU"/>
+                            <constraint firstItem="4tg-3a-n0S" firstAttribute="centerX" secondItem="grr-vQ-PCA" secondAttribute="centerX" id="WQV-ZG-y6r"/>
+                            <constraint firstItem="z05-xg-Gx6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="bdg-od-n6x"/>
+                            <constraint firstItem="4tg-3a-n0S" firstAttribute="leading" secondItem="z05-xg-Gx6" secondAttribute="trailing" constant="76" id="jGh-3M-xG9"/>
+                            <constraint firstItem="IOx-5a-DKB" firstAttribute="centerY" secondItem="z05-xg-Gx6" secondAttribute="centerY" id="qAQ-w0-fdi"/>
+                            <constraint firstItem="e2B-px-f7k" firstAttribute="top" secondItem="z05-xg-Gx6" secondAttribute="bottom" constant="14" id="rgn-uw-AaX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnPlay" destination="z05-xg-Gx6" id="mFa-Kt-gxR"/>
                         <outlet property="btnRecord" destination="IOx-5a-DKB" id="p7w-gC-QDa"/>
                         <outlet property="btnStop" destination="4tg-3a-n0S" id="o0l-zK-EVi"/>
+                        <outlet property="imgView" destination="LhV-K3-AiV" id="x0N-Cr-vsI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -84,8 +116,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="play" width="37" height="39"/>
-        <image name="record" width="38" height="39"/>
-        <image name="stop" width="38" height="37"/>
+        <image name="play" width="35" height="34"/>
+        <image name="record" width="36" height="36"/>
+        <image name="stop" width="37" height="34"/>
     </resources>
 </document>

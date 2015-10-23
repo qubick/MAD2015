@@ -15,6 +15,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     @IBOutlet weak var btnRecord: UIButton!
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var btnStop: UIButton!
+    @IBOutlet weak var imgView: UIImageView!
+    
     
     var audioPlayer: AVAudioPlayer?
     var audioRecorder: AVAudioRecorder?
@@ -27,6 +29,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
             btnPlay.enabled = false
             btnStop.enabled = true
             audioRecorder?.record()
+            imgView.image = UIImage(named: "mic.png")
         }
     }
     
@@ -43,6 +46,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
             } else {
                 audioPlayer?.delegate = self
                 audioPlayer?.play()
+                imgView.image = UIImage(named: "turntable.png")
             }
         }
     }
