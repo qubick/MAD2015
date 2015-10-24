@@ -10,9 +10,63 @@ import UIKit
 import AVFoundation
 
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
 
     var audioPlayer: AVAudioPlayer?
+    var audioRecorder: AVAudioRecorder?
+    var fileName = "myMusicPractice.caf"
+    
+    
+    @IBOutlet weak var listenOriginal: UIButton!
+    @IBOutlet weak var playMyMusic: UIButton!
+    @IBOutlet weak var stopMyMusic: UIButton!
+    @IBOutlet weak var recordMyMusic: UIButton!
+    
+    @IBAction func btnListenOriginal(sender: UIButton) {
+        
+        var error: NSError?
+        
+        // url --> original music url
+        //audioPlayer = AVAudioPlayer(contentsOfURL: audioRecorder?.url, error: &error)
+        
+    }
+    
+    @IBAction func btnPlayMyMusic(sender: UIButton) {
+        if audioRecorder?.recording == false {
+            stopMyMusic.enabled = true
+            recordMyMusic.enabled = false
+            var error: NSError?
+            
+            audioPlayer = AVAudioPlayer(contentsOfURL: audioRecorder?.url, error: &error)
+            
+            if let err = error {
+                println("AVAudioPlayer error: \(err.localizedDescription)")
+            } else {
+                audioPlayer?.delegate = self
+                audioPlayer?.play()
+            }
+        }
+    }
+    
+    @IBAction func btnStopMyMusic(sender: UIButton) {
+        recordMyMusic.enabled = true
+        stopMyMusic.enabled = false
+        playMyMusic.enabled = true
+        
+        if audioRecorder?.recording == true {
+            audioRecorder?.stop()
+        } else {
+            audioPlayer?.stop()
+        }
+    }
+    
+    @IBAction func btnRecordMyMusic(sender: UIButton) {
+        if audioRecorder?.recording == false {
+            playMyMusic.enabled = false
+            stopMyMusic.enabled = true
+            audioRecorder?.record() //record right now
+        }
+    }
     
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
@@ -264,8 +318,32 @@ class DetailViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        
+        listenOriginal.enabled = true
+        recordMyMusic.enabled = true
+        playMyMusic.enabled = false
+        stopMyMusic.enabled = false
+        
+        let dirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let docDir = dirPath[0] as! String
+        let audioFilePath = docDir.stringByAppendingPathComponent(fileName)
+        let audioFileURL = NSURL(fileURLWithPath: audioFilePath)
+        
+        let recordSettings = [AVEncoderAudioQualityKey:AVAudioQuality.Min.rawValue,
+            AVEncoderBitRateKey:16, AVNumberOfChannelsKey:2, AVSampleRateKey:44100.0]
+        var error: NSError?
+        
+        audioRecorder = AVAudioRecorder(URL: audioFileURL, settings: recordSettings as [NSObject: AnyObject], error: &error)
+        
+        
+        if let err = error {
+            println("AVAudioRecorder error: \(err.localizedDescription)")
+        } else { //no error
+            audioRecorder?.delegate = self
+            audioRecorder?.prepareToRecord()
+        }
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
     }
 
