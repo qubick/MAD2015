@@ -26,7 +26,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         
         var error: NSError?
         
-        // url --> original music url
+        //url --> original music url
         //audioPlayer = AVAudioPlayer(contentsOfURL: audioRecorder?.url, error: &error)
         
     }
@@ -328,6 +328,9 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         let docDir = dirPath[0] as! String
         let audioFilePath = docDir.stringByAppendingPathComponent(fileName)
         let audioFileURL = NSURL(fileURLWithPath: audioFilePath)
+        
+        //let salutFilePath = docDir.stringByAppendingPathComponent("salut.mp3")
+        //let salutFileURL = NSURL(fileURLWithPath: salutFilePath)
         
         let recordSettings = [AVEncoderAudioQualityKey:AVAudioQuality.Min.rawValue,
             AVEncoderBitRateKey:16, AVNumberOfChannelsKey:2, AVSampleRateKey:44100.0]
