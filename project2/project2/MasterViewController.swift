@@ -24,8 +24,7 @@ class MasterViewController: UITableViewController {
 
         //maybe remove these code - not allow to add any item
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
-        
+        //self.navigationItem.rightBarButtonItem = addButton
         
         
         //add object to table view by calling function as defaults
@@ -43,7 +42,7 @@ class MasterViewController: UITableViewController {
         //objects.insert(NSDate(), atIndex: 0)
         
         if count == 2 {
-            objects.insert("Salut Damour", atIndex: 0)
+            objects.insert("Salut Da'mour", atIndex: 0)
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             count++
@@ -58,8 +57,8 @@ class MasterViewController: UITableViewController {
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             count++
         } else {
-            println("no more item yet")
-            //not adding
+            println("This is not possible since no 'add' button on the bar")
+            //show alerts
         }
     }
 
