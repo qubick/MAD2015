@@ -11,16 +11,13 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var objects = [AnyObject]()
-
+    var count = 0
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
     override func viewDidLoad() {
-        //add object to table view
-        
-        //insertNewObject()
         
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
@@ -28,6 +25,13 @@ class MasterViewController: UITableViewController {
         //maybe remove these code - not allow to add any item
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         self.navigationItem.rightBarButtonItem = addButton
+        
+        
+        
+        //add object to table view by calling function as defaults
+        insertNewObject(addButton)
+        insertNewObject(addButton)
+        insertNewObject(addButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,9 +42,25 @@ class MasterViewController: UITableViewController {
     func insertNewObject(sender: AnyObject) {
         //objects.insert(NSDate(), atIndex: 0)
         
-        objects.insert("Salut Damour", atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        if count == 2 {
+            objects.insert("Salut Damour", atIndex: 0)
+            let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            count++
+        } else if count == 1 {
+            objects.insert("Grand Father's Clock", atIndex: 0)
+            let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            count++
+        } else if count == 0 {
+            objects.insert("Memory (CATS OST)", atIndex: 0)
+            let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            count++
+        } else {
+            println("no more item yet")
+            //not adding
+        }
     }
 
     // MARK: - Segues
