@@ -16,9 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="professorcat" translatesAutoresizingMaskIntoConstraints="NO" id="E7i-cQ-wpU">
-                                <rect key="frame" x="121" y="290" width="250" height="250"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="professorcat" translatesAutoresizingMaskIntoConstraints="NO" id="E7i-cQ-wpU">
+                                <rect key="frame" x="175" y="290" width="250" height="250"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="C62-8R-Z85"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="CyA-6b-0ub" appends="YES" id="Dcx-jl-B3n"/>
                                     <outletCollection property="gestureRecognizers" destination="ulq-1a-0rU" appends="YES" id="H7F-ya-8kB"/>
@@ -29,6 +32,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="E7i-cQ-wpU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="270" id="B4l-0U-Cd3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="E7i-cQ-wpU" secondAttribute="bottom" constant="60" id="Yy2-Ys-40j"/>
                             <constraint firstAttribute="centerX" secondItem="E7i-cQ-wpU" secondAttribute="centerX" id="rAr-8j-iJU"/>
                         </constraints>
                     </view>
