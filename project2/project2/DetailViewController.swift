@@ -15,7 +15,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     var audioPlayer: AVAudioPlayer?
     var audioRecorder: AVAudioRecorder?
     var fileName = "myMusicPractice.caf"
-    var index:Int //get from maserview's segue
+    var index:Int = 0//get from maserview's segue
     
     @IBOutlet weak var listenOriginal: UIButton!
     @IBOutlet weak var playMyMusic: UIButton!
@@ -108,6 +108,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         if audioPlayer != nil {
             audioPlayer!.play()
         }
+        println("passed index \(index)")
     }
     @IBAction func btnD4(sender: UIButton) {
         let audioFilePath = NSBundle.mainBundle().pathForResource("d4", ofType: "wav")

@@ -71,6 +71,9 @@ class MasterViewController: UITableViewController {
                 let object = objects[indexPath.row] as! NSString
             (segue.destinationViewController as! DetailViewController).detailItem = object
             }
+            
+            var songController = segue.destinationViewController as! DetailViewController
+            songController.index = count
         }
         
         //send data to detailviewcontroller
