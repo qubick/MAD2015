@@ -99,9 +99,10 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         if audioPlayer != nil {
             audioPlayer!.play()
         }
+        
+        println("debug: passed index \(index)")
     }
     @IBAction func btnC4sharp(sender: UIButton) {
-        println("hit C4 - middle key")
         
         let audioFilePath = NSBundle.mainBundle().pathForResource("c-4", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
@@ -110,7 +111,6 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         if audioPlayer != nil {
             audioPlayer!.play()
         }
-        println("passed index \(index)")
     }
     @IBAction func btnD4(sender: UIButton) {
         let audioFilePath = NSBundle.mainBundle().pathForResource("d4", ofType: "wav")

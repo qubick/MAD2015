@@ -41,7 +41,7 @@ class MasterViewController: UITableViewController {
     func insertNewObject(sender: AnyObject) {
         //objects.insert(NSDate(), atIndex: 0)
         
-        if count == 2 {
+        if count == 0 {
             objects.insert("Salut Da'mour", atIndex: 0)
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
@@ -51,7 +51,7 @@ class MasterViewController: UITableViewController {
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             count++
-        } else if count == 0 {
+        } else if count == 2 {
             objects.insert("Memory (Cats OST)", atIndex: 0)
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
