@@ -15,7 +15,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     var audioPlayer: AVAudioPlayer?
     var audioRecorder: AVAudioRecorder?
     var fileName = "myMusicPractice.caf"
-    var index:Int = 0//get from maserview's segue
+    var index:NSInteger = 0//get from maserview's segue
     
     @IBOutlet weak var listenOriginal: UIButton!
     @IBOutlet weak var playMyMusic: UIButton!
@@ -101,6 +101,8 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         }
     }
     @IBAction func btnC4sharp(sender: UIButton) {
+        println("hit C4 - middle key")
+        
         let audioFilePath = NSBundle.mainBundle().pathForResource("c-4", ofType: "wav")
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         

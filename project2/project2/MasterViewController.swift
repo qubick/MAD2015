@@ -72,8 +72,10 @@ class MasterViewController: UITableViewController {
             (segue.destinationViewController as! DetailViewController).detailItem = object
             }
             
+            let selectedIndex = self.tableView.indexPathForCell(sender as! UITableViewCell) //get selected row
+            
             var songController = segue.destinationViewController as! DetailViewController
-            songController.index = count
+            songController.index = selectedIndex!.row
         }
         
         //send data to detailviewcontroller
