@@ -65,8 +65,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     
     override func viewDidLoad() {
         
-        btnPlay.enabled = false;
-        btnStop.enabled = false;
+        btnPlay.enabled = false
+        btnStop.enabled = false
         
     
         let dirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)

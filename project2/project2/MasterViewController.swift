@@ -47,12 +47,12 @@ class MasterViewController: UITableViewController {
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             count++
         } else if count == 1 {
-            objects.insert("Grand Father's Clock", atIndex: 0)
+            objects.insert("Aux Champs-Elysees (Waterloo Road)", atIndex: 0)
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             count++
         } else if count == 0 {
-            objects.insert("Memory (CATS OST)", atIndex: 0)
+            objects.insert("Memory (Cats OST)", atIndex: 0)
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             count++
@@ -65,12 +65,15 @@ class MasterViewController: UITableViewController {
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                 let object = objects[indexPath.row] as! NSString
             (segue.destinationViewController as! DetailViewController).detailItem = object
             }
         }
+        
+        //send data to detailviewcontroller
     }
 
     // MARK: - Table View

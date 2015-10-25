@@ -15,12 +15,33 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     var audioPlayer: AVAudioPlayer?
     var audioRecorder: AVAudioRecorder?
     var fileName = "myMusicPractice.caf"
-    
+    var index:Int //get from maserview's segue
     
     @IBOutlet weak var listenOriginal: UIButton!
     @IBOutlet weak var playMyMusic: UIButton!
     @IBOutlet weak var stopMyMusic: UIButton!
     @IBOutlet weak var recordMyMusic: UIButton!
+    
+    
+    /*
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "showDetail" {
+    
+    var masterViewController:MasterViewController = segue.destinationViewController as! MasterViewController
+    
+    if masterViewController.count == 0 {
+    println("now count is 0")
+    } else if masterViewController.count == 1 {
+    println("now count is 1")
+    } else if masterViewController.count == 2 {
+    println("now count is 2")
+    }
+    else {
+    println("nothing passed")
+    }
+    }
+    }
+    */
     
     @IBAction func btnListenOriginal(sender: UIButton) {
         
