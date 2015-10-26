@@ -17,6 +17,12 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     var fileName = "myMusicPractice.caf"
     var index:NSInteger = 0//get from maserview's segue
     
+    var noteImgSet: NSMutableArray = []
+    var noteTxtSet: NSMutableArray = []
+    
+    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var imgNoteLine: UIImageView!
+    
     @IBOutlet weak var listenOriginal: UIButton!
     @IBOutlet weak var playMyMusic: UIButton!
     @IBOutlet weak var stopMyMusic: UIButton!
@@ -70,6 +76,9 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     }
     
     @IBAction func btnStopMyMusic(sender: UIButton) {
+        
+        imgNoteLine.stopAnimating() //stop animation
+        
         recordMyMusic.enabled = true
         stopMyMusic.enabled = false
         playMyMusic.enabled = true
@@ -82,14 +91,18 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     }
     
     @IBAction func btnRecordMyMusic(sender: UIButton) {
+        
+        self.imgNoteLine.animationImages = noteImgSet as [AnyObject]
+        
+        imgNoteLine.animationDuration = NSTimeInterval(10.0)
+        imgNoteLine.startAnimating()
+        
         if audioRecorder?.recording == false {
             playMyMusic.enabled = false
             stopMyMusic.enabled = true
             audioRecorder?.record() //record right now
         }
     }
-    
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
 
     @IBAction func btnC4(sender: UIButton) {
         let audioFilePath = NSBundle.mainBundle().pathForResource("c4", ofType: "wav")
@@ -347,6 +360,56 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         recordMyMusic.enabled = true
         playMyMusic.enabled = false
         stopMyMusic.enabled = false
+        
+        switch (index) {
+            case 0:
+                if let label = detailDescriptionLabel {
+                    detailDescriptionLabel.text = "Memory (Cats OST)"
+                }
+                
+                imgNoteLine.image = UIImage(named: "memory1") //set 1st line as default
+            
+                for i in 1...6 {
+                    var imgTitle = "memory\(i)"
+                    var image = UIImage(named: imgTitle)
+                    noteImgSet.addObject(image!)
+                    
+                    println(imgTitle)
+                }
+            
+            case 1:
+                if let label = detailDescriptionLabel {
+                    detailDescriptionLabel.text = "Aux Champs-Elyeese"
+                }
+                
+                imgNoteLine.image = UIImage(named: "champs1")
+                
+                for i in 1...5 {
+                    var imgTitle = "champs\(i)"
+                    var image = UIImage(named: imgTitle)
+                    noteImgSet.addObject(image!)
+                    
+                    
+                    println(imgTitle)
+                }
+            case 2:
+                if let label = detailDescriptionLabel {
+                    detailDescriptionLabel.text = "Salut Da'mour"
+                }
+                
+                imgNoteLine.image = UIImage(named: "salut1")
+                
+                for i in 1...8 {
+                    var imgTitle = "salut\(i)"
+                    var image = UIImage(named: imgTitle)
+                    noteImgSet.addObject(image!)
+                    
+                    
+                    println(imgTitle)
+                }
+            default:
+                println("this case should not happen")
+        }
         
         let dirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         let docDir = dirPath[0] as! String
