@@ -27,7 +27,7 @@ class MasterViewController: UITableViewController {
         //self.navigationItem.rightBarButtonItem = addButton
         
         
-        //add object to table view by calling function as defaults
+        //add object to table view manually
         insertNewObject(addButton)
         insertNewObject(addButton)
         insertNewObject(addButton)

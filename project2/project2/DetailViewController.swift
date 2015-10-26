@@ -95,6 +95,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         self.imgNoteLine.animationImages = noteImgSet as [AnyObject]
         
         imgNoteLine.animationDuration = NSTimeInterval(10.0)
+        imgNoteLine.animationRepeatCount = 1
         imgNoteLine.startAnimating()
         
         if audioRecorder?.recording == false {
