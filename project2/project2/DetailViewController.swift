@@ -17,6 +17,10 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     var fileName = "myMusicPractice.caf"
     var index:NSInteger = 0//get from maserview's segue
     
+    var songTitle: String = ""
+    var id:Int = 1
+    var cnt:Int = 0
+    
     var noteImgSet: NSMutableArray = []
     var noteTxtSet: NSMutableArray = []
     
@@ -40,6 +44,12 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         if imgBar.center.x > view.bounds.size.width - 10 {
         
             imgBar.center.x = 37
+            if id++ < cnt {
+                var imgTitle = "\(songTitle)" + "\(id)"
+                imgNoteLine.image = UIImage(named: imgTitle)
+            } else {
+                timer.invalidate()
+            }
         }
     }
     
@@ -71,7 +81,9 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     
     @IBAction func btnStopMyMusic(sender: UIButton) {
         
-        imgNoteLine.stopAnimating() //stop animation
+        //imgNoteLine.stopAnimating() //stop animation
+        imgNoteLine.animationDuration = NSTimeInterval(10000000) //repeat in a long loop rather than stop
+                                                                //so it can stop at the moment
         
         recordMyMusic.enabled = true
         stopMyMusic.enabled = false
@@ -87,11 +99,13 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     
     @IBAction func btnRecordMyMusic(sender: UIButton) {
         
+        /*
         self.imgNoteLine.animationImages = noteImgSet as [AnyObject]
         
-        imgNoteLine.animationDuration = NSTimeInterval(time)
+        imgNoteLine.animationDuration = NSTimeInterval(time) //time depends on the chosen song
         imgNoteLine.animationRepeatCount = 1
         imgNoteLine.startAnimating()
+        */
         
         if audioRecorder?.recording == false {
             playMyMusic.enabled = false
@@ -379,6 +393,8 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
                     println(imgTitle)
                 }
             
+                songTitle = "memory"
+                cnt = 6
                 time = 62 //musical note line swipe interval
             
                 //let salutFilePath = docDir.stringByAppendingPathComponent("salut.mp3")
@@ -399,7 +415,8 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
                     
                     println(imgTitle)
                 }
-            
+                songTitle = "champs"
+                cnt = 5
                 time = 50 //musical note line swipe interval
                 println(time)
             case 2:
@@ -417,7 +434,8 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
                     
                     println(imgTitle)
                 }
-            
+                songTitle = "salut"
+                cnt = 8
                 time = 80
             default:
                 println("this case should not happen")
