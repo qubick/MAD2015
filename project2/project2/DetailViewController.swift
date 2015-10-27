@@ -20,7 +20,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     var noteImgSet: NSMutableArray = []
     var noteTxtSet: NSMutableArray = []
     
-    var delta = CGPointMake(1, 0) //move in x-coordinate 1px at a time
+    var delta = CGPointMake(3, 0) //move in x-coordinate 1px at a time
     var timer = NSTimer()
     
     @IBOutlet weak var detailDescriptionLabel: UILabel!
@@ -34,26 +34,13 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     
     func moveBar() {
         imgBar.center = CGPointMake(imgBar.center.x + delta.x, imgBar.center.y + delta.y)
+        
+        //if reached to the end of line, back to start
+        if imgBar.center.x > view.bounds.size.width - 10 {
+        
+            imgBar.center.x = 12
+        }
     }
-    /*
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == "showDetail" {
-    
-    var masterViewController:MasterViewController = segue.destinationViewController as! MasterViewController
-    
-    if masterViewController.count == 0 {
-    println("now count is 0")
-    } else if masterViewController.count == 1 {
-    println("now count is 1")
-    } else if masterViewController.count == 2 {
-    println("now count is 2")
-    }
-    else {
-    println("nothing passed")
-    }
-    }
-    }
-    */
     
     @IBAction func btnListenOriginal(sender: UIButton) {
         
@@ -94,6 +81,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         } else {
             audioPlayer?.stop()
         }
+        timer.invalidate()
     }
     
     @IBAction func btnRecordMyMusic(sender: UIButton) {
@@ -110,9 +98,11 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
             audioRecorder?.record() //record right now
         }
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0,
+        //start bar animation
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.05,
             target: self, selector: "moveBar", userInfo: nil, repeats: true)
-        moveBar() //start bar animation
+        
+        //moveBar() //start bar animation
     }
 
     @IBAction func btnC4(sender: UIButton) {
