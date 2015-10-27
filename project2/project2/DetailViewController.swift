@@ -358,7 +358,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
 
     override func viewDidLoad() {
         
-        listenOriginal.enabled = true
+        listenOriginal.enabled = false
         recordMyMusic.enabled = true
         playMyMusic.enabled = false
         stopMyMusic.enabled = false
@@ -380,6 +380,10 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
                 }
             
                 time = 62 //musical note line swipe interval
+            
+                //let salutFilePath = docDir.stringByAppendingPathComponent("salut.mp3")
+                //let salutFileURL = NSURL(fileURLWithPath: salutFilePath)
+            
             case 1:
                 if let label = detailDescriptionLabel {
                     detailDescriptionLabel.text = "Aux Champs-Elyeese"
@@ -423,9 +427,6 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         let docDir = dirPath[0] as! String
         let audioFilePath = docDir.stringByAppendingPathComponent(fileName)
         let audioFileURL = NSURL(fileURLWithPath: audioFilePath)
-        
-        //let salutFilePath = docDir.stringByAppendingPathComponent("salut.mp3")
-        //let salutFileURL = NSURL(fileURLWithPath: salutFilePath)
         
         let recordSettings = [AVEncoderAudioQualityKey:AVAudioQuality.Min.rawValue,
             AVEncoderBitRateKey:16, AVNumberOfChannelsKey:2, AVSampleRateKey:44100.0]
