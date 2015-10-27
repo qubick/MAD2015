@@ -21,7 +21,8 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     var noteTxtSet: NSMutableArray = []
     
     var delta = CGPointMake(3, 0) //move in x-coordinate 1px at a time
-    var timer = NSTimer()
+    var timer = NSTimer() //for bar movement
+    var time: Float = 0
     
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var imgNoteLine: UIImageView!
@@ -38,7 +39,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         //if reached to the end of line, back to start
         if imgBar.center.x > view.bounds.size.width - 10 {
         
-            imgBar.center.x = 12
+            imgBar.center.x = 37
         }
     }
     
@@ -88,7 +89,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         
         self.imgNoteLine.animationImages = noteImgSet as [AnyObject]
         
-        imgNoteLine.animationDuration = NSTimeInterval(10.0)
+        imgNoteLine.animationDuration = NSTimeInterval(time)
         imgNoteLine.animationRepeatCount = 1
         imgNoteLine.startAnimating()
         
@@ -378,6 +379,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
                     println(imgTitle)
                 }
             
+                time = 62 //musical note line swipe interval
             case 1:
                 if let label = detailDescriptionLabel {
                     detailDescriptionLabel.text = "Aux Champs-Elyeese"
@@ -393,6 +395,9 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
                     
                     println(imgTitle)
                 }
+            
+                time = 50 //musical note line swipe interval
+                println(time)
             case 2:
                 if let label = detailDescriptionLabel {
                     detailDescriptionLabel.text = "Salut Da'mour"
@@ -408,6 +413,8 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
                     
                     println(imgTitle)
                 }
+            
+                time = 80
             default:
                 println("this case should not happen")
         }
