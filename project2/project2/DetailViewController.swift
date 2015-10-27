@@ -20,15 +20,21 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     var noteImgSet: NSMutableArray = []
     var noteTxtSet: NSMutableArray = []
     
+    var delta = CGPointMake(1, 0) //move in x-coordinate 1px at a time
+    var timer = NSTimer()
+    
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var imgNoteLine: UIImageView!
+    @IBOutlet weak var imgBar: UIImageView!
     
     @IBOutlet weak var listenOriginal: UIButton!
     @IBOutlet weak var playMyMusic: UIButton!
     @IBOutlet weak var stopMyMusic: UIButton!
     @IBOutlet weak var recordMyMusic: UIButton!
     
-    
+    func moveBar() {
+        imgBar.center = CGPointMake(imgBar.center.x + delta.x, imgBar.center.y + delta.y)
+    }
     /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "showDetail" {
@@ -103,6 +109,10 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
             stopMyMusic.enabled = true
             audioRecorder?.record() //record right now
         }
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0,
+            target: self, selector: "moveBar", userInfo: nil, repeats: true)
+        moveBar() //start bar animation
     }
 
     @IBAction func btnC4(sender: UIButton) {

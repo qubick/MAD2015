@@ -11,13 +11,14 @@ import UIKit
 
 class MyWhiteButton: UIButton {
     required init(coder aDecoder: NSCoder!) {
+        let colorImage = UIGraphicsGetImageFromCurrentImageContext()
+        
         super.init(coder: aDecoder)
         self.layer.cornerRadius = 5.0
         self.layer.borderColor = UIColor.blackColor().CGColor
         self.layer.borderWidth = 1.0
         self.backgroundColor = UIColor.whiteColor()
-        self.tintColor = UIColor.whiteColor()
-        
+        self.tintColor = UIColor.redColor()
     }
 }
 
@@ -29,6 +30,5 @@ class MyBlackButton: UIButton {
         self.layer.borderWidth = 1.5
         self.backgroundColor = UIColor.blackColor()
         self.tintColor = UIColor.whiteColor()
-        
     }
 }
