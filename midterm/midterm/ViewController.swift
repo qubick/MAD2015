@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentGallons: UILabel!
     @IBOutlet weak var totaltime: UILabel!
     @IBOutlet weak var totalGallons: UILabel!
+    @IBOutlet weak var imgRide: UIImageView!
     
     
     @IBAction func typeMiles(sender: UITextField) {
@@ -25,7 +26,17 @@ class ViewController: UIViewController {
         currentGallons.text = String(format:"%.0f", oil)
     }
     
-    @IBAction func chooseRide(sender: AnyObject) {
+    @IBAction func chooseRide(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0: //car
+            imgRide.image = UIImage(named: "car")
+        case 1: //bus
+            imgRide.image = UIImage(named: "bus")
+        case 2: //bike
+            imgRide.image = UIImage(named: "bike")
+        default:
+            println("this cannot be happened")
+        }
     }
     
     override func viewDidLoad() {

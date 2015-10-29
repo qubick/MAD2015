@@ -133,6 +133,7 @@
                     </view>
                     <connections>
                         <outlet property="currentGallons" destination="mvM-x3-WPY" id="vBK-fj-3yS"/>
+                        <outlet property="imgRide" destination="Sgg-Qz-inJ" id="cgv-2p-yHK"/>
                         <outlet property="totalGallons" destination="kBC-Zk-YtI" id="kBt-sB-BbQ"/>
                         <outlet property="totaltime" destination="Ut0-pB-Zrb" id="mgk-yg-Of1"/>
                     </connections>
