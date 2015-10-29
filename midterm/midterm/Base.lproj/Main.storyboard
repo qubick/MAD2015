@@ -102,7 +102,7 @@
                                     <action selector="onOffMonthly:" destination="vXZ-lx-hvc" eventType="valueChanged" id="khY-fD-eho"/>
                                 </connections>
                             </switch>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="7hh-I6-o9c">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="7hh-I6-o9c">
                                 <rect key="frame" x="468" y="187" width="118" height="31"/>
                                 <connections>
                                     <action selector="slideGallons:" destination="vXZ-lx-hvc" eventType="valueChanged" id="GLU-1M-5Wk"/>

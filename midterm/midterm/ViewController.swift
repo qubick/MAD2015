@@ -21,7 +21,8 @@ class ViewController: UIViewController {
     }
     @IBAction func slideGallons(sender: UISlider) {
         let oil = sender.value
-        currentGallons.text = String(format: ".0f", oil)
+        println(oil)
+        currentGallons.text = String(format:"%.0f", oil)
     }
     
     @IBAction func chooseRide(sender: AnyObject) {
