@@ -24,14 +24,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func slideGallons(sender: UISlider) {
         let oil = sender.value
         println(oil)
-        currentGallons.text = String(format:"%.0f", oil)
+        currentGallons.text = String(format:"%.2f", oil)
     }
     
     @IBAction func chooseRide(sender: UISegmentedControl) {
+        
+        
         switch sender.selectedSegmentIndex {
         case 0: //car
             imgRide.image = UIImage(named: "car")
-        case 1: //bus
+                    case 1: //bus
             imgRide.image = UIImage(named: "bus")
         case 2: //bike
             imgRide.image = UIImage(named: "bike")
@@ -47,6 +49,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func calculate() {
     
+        var myAlert = UIAlertView()
         var totalMile:Float?
         let curFormatter = NSNumberFormatter()
         let miles = (dailyMiles.text as NSString).floatValue
@@ -54,13 +57,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         switch segmentRide.selectedSegmentIndex {
         case 0: //car
              totalMile = miles/20*60 //when average speed is 20mph
+            
+             myAlert.title = "Suggestion for you!"
+             myAlert.message = "Why don't you try Carpool?"
+             myAlert.addButtonWithTitle("OK")
+
         case 1: //bus
-            totalMile = miles/12*60 + 5
+            totalMile = miles/12*60 + 5*2 //wait 5min each way for round trip
         case 2: //bike
             totalMile = miles/10*60
         default:
             println("this should not happens")
         }
+        
         
         let gallons = (dailyMiles.text as NSString).floatValue
         //let current = curFormatter.numberFromString(currentGallons.text!)
@@ -68,10 +77,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if segmentRide.selectedSegmentIndex == 1 || segmentRide.selectedSegmentIndex == 2 {
             totalGallon = 0.0
+        } else {
+            myAlert.show()
         }
         curFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
         totaltime.text = curFormatter.stringFromNumber(totalMile!)
         totalGallons.text = curFormatter.stringFromNumber(totalGallon)
+        
+        
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
