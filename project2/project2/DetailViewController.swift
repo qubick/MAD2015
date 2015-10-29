@@ -82,7 +82,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     @IBAction func btnStopMyMusic(sender: UIButton) {
         
         //imgNoteLine.stopAnimating() //stop animation
-        imgNoteLine.animationDuration = NSTimeInterval(10000000) //repeat in a long loop rather than stop
+        //imgNoteLine.animationDuration = NSTimeInterval(10000000) //repeat in a long loop rather than stop
                                                                 //so it can stop at the moment
         
         recordMyMusic.enabled = true
@@ -100,6 +100,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     @IBAction func btnRecordMyMusic(sender: UIButton) {
         
         /*
+        //not animating automatically --> update image view along with vertical bar movements
         self.imgNoteLine.animationImages = noteImgSet as [AnyObject]
         
         imgNoteLine.animationDuration = NSTimeInterval(time) //time depends on the chosen song
@@ -120,237 +121,75 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         //moveBar() //start bar animation
     }
 
-    @IBAction func btnC4(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("c4", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-        
-        println("debug: passed index \(index)")
-    }
-    @IBAction func btnC4sharp(sender: UIButton) {
-        
-        let audioFilePath = NSBundle.mainBundle().pathForResource("c-4", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnD4(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("d4", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnD4sharp(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("d-4", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-        
-    }
-    @IBAction func btnE4(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("e4", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnF4(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("f4", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-        
-    }
-    @IBAction func btnF4sharp(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("f-4", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnG4(sender: UIButton) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("g4", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnG4sharp(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("g-4", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnA4(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("a4", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnA4sharp(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("a-4", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnB4(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("b4", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnC5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("c5", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnC5sharp(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("c-5", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnD5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("d5", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnD5sharp(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("d-5", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnE5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("e5", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnF5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("f5", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnF5shapr(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("f-5", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
+    @IBAction func hitKey(sender: UIButton) {
     
-    @IBAction func btnG5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("g5", ofType: "wav")
+        var audioFilePath = NSBundle.mainBundle().pathForResource("c4", ofType: "wav") //default
+        
+        switch sender.tag {
+        case 0:
+             audioFilePath = NSBundle.mainBundle().pathForResource("c4", ofType: "wav")
+        case 1:
+             audioFilePath = NSBundle.mainBundle().pathForResource("c-4", ofType: "wav")
+        case 2:
+             audioFilePath = NSBundle.mainBundle().pathForResource("d4", ofType: "wav")
+        case 3:
+             audioFilePath = NSBundle.mainBundle().pathForResource("d-4", ofType: "wav")
+        case 4:
+             audioFilePath = NSBundle.mainBundle().pathForResource("e4", ofType: "wav")
+        case 5:
+             audioFilePath = NSBundle.mainBundle().pathForResource("f4", ofType: "wav")
+        case 6:
+             audioFilePath = NSBundle.mainBundle().pathForResource("f-4", ofType: "wav")
+        case 7:
+             audioFilePath = NSBundle.mainBundle().pathForResource("g4", ofType: "wav")
+        case 8:
+             audioFilePath = NSBundle.mainBundle().pathForResource("g-4", ofType: "wav")
+        case 9:
+             audioFilePath = NSBundle.mainBundle().pathForResource("a4", ofType: "wav")
+        case 10:
+             audioFilePath = NSBundle.mainBundle().pathForResource("a-4", ofType: "wav")
+        case 11:
+             audioFilePath = NSBundle.mainBundle().pathForResource("b4", ofType: "wav")
+        case 12:
+             audioFilePath = NSBundle.mainBundle().pathForResource("c5", ofType: "wav")
+        case 13:
+             audioFilePath = NSBundle.mainBundle().pathForResource("c-5", ofType: "wav")
+        case 14:
+             audioFilePath = NSBundle.mainBundle().pathForResource("d5", ofType: "wav")
+        case 15:
+             audioFilePath = NSBundle.mainBundle().pathForResource("d-5", ofType: "wav")
+        case 16:
+             audioFilePath = NSBundle.mainBundle().pathForResource("e5", ofType: "wav")
+        case 17:
+             audioFilePath = NSBundle.mainBundle().pathForResource("f5", ofType: "wav")
+        case 18:
+             audioFilePath = NSBundle.mainBundle().pathForResource("f-5", ofType: "wav")
+        case 19:
+             audioFilePath = NSBundle.mainBundle().pathForResource("g5", ofType: "wav")
+        case 20:
+             audioFilePath = NSBundle.mainBundle().pathForResource("g-5", ofType: "wav")
+        case 21:
+             audioFilePath = NSBundle.mainBundle().pathForResource("a5", ofType: "wav")
+        case 22:
+             audioFilePath = NSBundle.mainBundle().pathForResource("a-5", ofType: "wav")
+        case 23:
+             audioFilePath = NSBundle.mainBundle().pathForResource("b5", ofType: "wav")
+        case 24:
+             audioFilePath = NSBundle.mainBundle().pathForResource("c4", ofType: "wav")
+        case 25:
+             audioFilePath = NSBundle.mainBundle().pathForResource("c-4", ofType: "wav")
+        default:
+            println("this should not happe")
+            
+        }
+        
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
         if audioPlayer != nil {
             audioPlayer!.play()
         }
-    }
-    
-    @IBAction func btnG5sharp(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("g-5", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnA5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("a5", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnA5sharp(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("a-5", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnB5(sender: AnyObject) {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("b5", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }
-    }
-    @IBAction func btnC6(sender: AnyObject) {
-        /*let audioFilePath = NSBundle.mainBundle().pathForResource("c6", ofType: "mp3")
-        let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
-        if audioPlayer != nil {
-            audioPlayer!.play()
-        }*/
+
     }
 
     @IBOutlet weak var btnC5: MyWhiteButton!
@@ -363,11 +202,13 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
 
     func configureView() {
         // Update the user interface for the detail item.
+        
         if let detail: AnyObject = self.detailItem {
             if let label = self.detailDescriptionLabel {
                 label.text = detail.description
             }
         }
+
     }
 
     override func viewDidLoad() {
