@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
+    var delta = CGPointMake(3, 0)
+    var radius = CGFloat()
+    var timer = NSTimer()
+    var translation = CGPointMake(0.0, 0.0)
+    
     @IBOutlet weak var dailyMiles: UITextField!
     @IBOutlet weak var currentGallons: UILabel!
     @IBOutlet weak var onOffMonthly: UISwitch!
@@ -102,6 +107,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             monthly2.text = ""
             monthly3.text = ""
         }
+        
+        
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
