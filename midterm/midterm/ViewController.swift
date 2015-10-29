@@ -38,6 +38,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         default:
             println("this cannot be happened")
         }
+        calculate()
+    }
+    
+    @IBAction func calculate(sender: UIButton) {
+        calculate()
     }
     
     func calculate() {
@@ -52,15 +57,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         case 1: //bus
             totalMile = miles/12*60 + 5
         case 2: //bike
-            totalMile = miles/10
+            totalMile = miles/10*60
         default:
             println("this should not happens")
         }
         
         let gallons = (dailyMiles.text as NSString).floatValue
-        let totalGallon = gallons/24 //when average efficiency is 24 mpg
+        //let current = curFormatter.numberFromString(currentGallons.text!)
+        var totalGallon = gallons/24 //- current//when average efficiency is 24 mpg
         
-        //curFormatter.numberStyle = NSNumberFormatterStyle.number
+        if segmentRide.selectedSegmentIndex == 1 || segmentRide.selectedSegmentIndex == 2 {
+            totalGallon = 0.0
+        }
+        curFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
         totaltime.text = curFormatter.stringFromNumber(totalMile!)
         totalGallons.text = curFormatter.stringFromNumber(totalGallon)
     }
