@@ -12,15 +12,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var dailyMiles: UITextField!
     @IBOutlet weak var currentGallons: UILabel!
+    @IBOutlet weak var onOffMonthly: UISwitch!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var segmentRide: UISegmentedControl!
+
+    @IBOutlet weak var monthly1: UILabel!
+    @IBOutlet weak var monthly2: UILabel!
+    @IBOutlet weak var monthly3: UILabel!
+    
     @IBOutlet weak var totaltime: UILabel!
     @IBOutlet weak var totalGallons: UILabel!
     @IBOutlet weak var imgRide: UIImageView!
     
-    
-    @IBAction func onOffMonthly(sender: UISwitch) {
+    @IBAction func toggleMonth(sender: UISwitch) {
+        calculate()
     }
+    
     @IBAction func slideGallons(sender: UISlider) {
         let oil = sender.value
         println(oil)
@@ -28,7 +35,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func chooseRide(sender: UISegmentedControl) {
-        
         
         switch sender.selectedSegmentIndex {
         case 0: //car
@@ -80,11 +86,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
             myAlert.show()
         }
+        
         curFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
         totaltime.text = curFormatter.stringFromNumber(totalMile!)
         totalGallons.text = curFormatter.stringFromNumber(totalGallon)
         
-        
+        if onOffMonthly.on {
+            let monthCommute = totalMile!*20/60 //20days work, in hour
+            monthly1.text = "Monthly Hour"
+            monthly2.text = curFormatter.stringFromNumber(monthCommute)
+            monthly3.text = "hours"
+            
+        } else {
+            monthly1.text = ""
+            monthly2.text = ""
+            monthly3.text = ""
+        }
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
