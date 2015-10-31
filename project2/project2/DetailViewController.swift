@@ -213,7 +213,7 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
 
     override func viewDidLoad() {
         
-        listenOriginal.enabled = false
+        //listenOriginal.enabled = false
         recordMyMusic.enabled = true
         playMyMusic.enabled = false
         stopMyMusic.enabled = false
