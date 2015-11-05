@@ -3,4 +3,13 @@
     <string name="text_message">How are you feeling?</string>
     <string name="mood_button">Mood</string>
     <string name="feeling"></string>
+    <string-array name="moods">
+        <item>happy</item>
+        <item>gloomy</item>
+        <item>creepy</item>
+        <item>depressed</item>
+        <item>confused</item>
+        <item>sad</item>
+        <item>delighted</item>
+    </string-array>
 </resources>
