@@ -12,4 +12,11 @@
         <item>sad</item>
         <item>delighted</item>
     </string-array>
+
+    <string name="enlgihted_check">enlightened</string>
+    <string name="conservative_check">conservative</string>
+    <string name="sarcastic_check">sarcastic</string>
+    <string name="secretive_check">secretive</string>
+    <string name="meditate_switch">Meditate</string>
+    <string name="mood_img">MoodImg</string>
 </resources>
