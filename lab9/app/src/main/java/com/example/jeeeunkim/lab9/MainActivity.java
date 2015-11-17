@@ -50,13 +50,13 @@ public class MainActivity extends AppCompatActivity { //controller view in iOS
                 yogatype="doing nothing";
                 break;
             case R.id.radioButton1:
-                yogatype="playing piano";
+                yogatype="music";
                 break;
             case R.id.radioButton2:
                 yogatype="sports";
                 break;
             case R.id.radioButton3:
-                yogatype="programming";
+                yogatype="reading";
                 break;
             default:
                 yogatype="doing nothing";
