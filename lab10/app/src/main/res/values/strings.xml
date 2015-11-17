@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">lab10</string>
+
+    <string name="title">Coffee Shop Finder</string>
+    <string name="subtitle">Choose your crowd</string>
+    <string-array name="crowds">
+        <item>College</item>
+        <item>Hippie</item>
+        <item>Office Worker</item>
+        <item>Atheletes</item>
+    </string-array>
+    <string name="button">Find!</string>
+</resources>
