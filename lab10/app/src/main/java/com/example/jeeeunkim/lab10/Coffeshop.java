@@ -35,15 +35,20 @@ public class Coffeshop {
                 coffeeShopURL = "http://innisfreepoetry.com";
                 image = R.drawable.innisfree;
                 break;
-            case "Popular":
+            case "Reader":
                 coffeeShop = "Amante";
                 coffeeShopURL = "http://amantecoffee.com";
                 image = R.drawable.amante;
                 break;
-            default:
+            case "popular":
                 coffeeShop = "Starbucks";
                 coffeeShopURL = "http://starbucks.com";
                 image = R.drawable.starbucks;
+                break;
+            default:
+                coffeeShop = "none";
+                coffeeShopURL = "https://www.google.com/maps/search/coffee/@40.006551,-105.2686135,15z/data=!3m1!4b1";
+                image = R.drawable.coffeecup;
                 break;
         }
     }
