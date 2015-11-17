@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity { //controller view in iOS
         Switch meditate_switch = (Switch) findViewById(R.id.switch1);
         boolean meditate = meditate_switch.isChecked();
         if(meditate){
-            meditate_string = "and meditates with " + yogatype;
+            meditate_string = " and meditates with " + yogatype;
         }
 
         //img
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity { //controller view in iOS
         }
         emotion.setImageResource(image);
         //update mood textview
-        feeling.setText("I am in a " + checkbox_string + moodText + " person" + meditate_string);
+        feeling.setText("I am a " + checkbox_string + " person, in a " + moodText + meditate_string);
 
     }
 
