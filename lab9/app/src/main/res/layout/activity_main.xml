@@ -42,13 +42,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/enlgihted_check"
-                android:id="@+id/checkBox1" />
+                android:id="@+id/check1" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/conservative_check"
-                android:id="@+id/checkBox2" />
+                android:id="@+id/check2" />
         </LinearLayout>
 
         <LinearLayout
@@ -62,13 +62,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sarcastic_check"
-                android:id="@+id/checkBox3" />
+                android:id="@+id/check3" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/secretive_check"
-                android:id="@+id/checkBox4" />
+                android:id="@+id/check4" />
         </LinearLayout>
 
         <LinearLayout

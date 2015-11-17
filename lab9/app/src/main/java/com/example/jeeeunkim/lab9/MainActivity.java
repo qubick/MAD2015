@@ -14,34 +14,32 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity { //controller view in iOS
     public void findMood(View view){
 
-        TextView feeling = (TextView)findViewById(R.id.feelingText);
-        Spinner moodSpinner = (Spinner)findViewById(R.id.spinner);
-        String moodText = String.valueOf(moodSpinner.getSelectedItem());
-        feeling.setText("I'm in a" + moodText + " mood!");
-
-
-        String checkbox_string = "";
-        CheckBox check1 = (CheckBox) findViewById(R.id.checkBox1);
+        String checkbox_string1 = "";
+        CheckBox check1 = (CheckBox) findViewById(R.id.check1);
         boolean checked1 = check1.isChecked();
         if(checked1){
-            checkbox_string += " enlightened";
+            checkbox_string1 = " enlightened";
         }
 
-        CheckBox check2 = (CheckBox) findViewById(R.id.checkBox2);
+        String checkbox_string2 = "";
+        CheckBox check2 = (CheckBox) findViewById(R.id.check2);
         boolean checked2 = check2.isChecked();
         if(checked2){
-            checkbox_string += " conservative";
-        }
-        CheckBox check3 = (CheckBox) findViewById(R.id.checkBox3);
-        boolean checked3 = check3.isChecked();
-        if(checked1){
-            checkbox_string += " sarcastic";
+            checkbox_string2 = " conservative";
         }
 
-        CheckBox check4 = (CheckBox) findViewById(R.id.checkBox4);
+        String checkbox_string3 = "";
+        CheckBox check3 = (CheckBox) findViewById(R.id.check3);
+        boolean checked3 = check3.isChecked();
+        if(checked3){
+            checkbox_string3 = " sarcastic";
+        }
+
+        String checkbox_string4 = "";
+        CheckBox check4 = (CheckBox) findViewById(R.id.check4);
         boolean checked4 = check4.isChecked();
-        if(checked2){
-            checkbox_string += " secretive";
+        if(checked4){
+            checkbox_string4 = " secretive";
         }
 
         RadioGroup yoga = (RadioGroup) findViewById(R.id.yoga_type);
@@ -49,30 +47,32 @@ public class MainActivity extends AppCompatActivity { //controller view in iOS
         int yoga_id = yoga.getCheckedRadioButtonId();
         switch(yoga_id){
             case -1:
-                yogatype="no";
+                yogatype="doing nothing";
                 break;
             case R.id.radioButton1:
-                yogatype="Yin";
+                yogatype="playing piano";
                 break;
             case R.id.radioButton2:
-                yogatype="Bikram";
+                yogatype="sports";
                 break;
             case R.id.radioButton3:
-                yogatype="Hatha";
+                yogatype="programming";
                 break;
             default:
-                yogatype="no";
+                yogatype="doing nothing";
         }
 
         String meditate_string = "";
         Switch meditate_switch = (Switch) findViewById(R.id.switch1);
         boolean meditate = meditate_switch.isChecked();
         if(meditate){
-            meditate_string = " and meditates with " + yogatype;
+            meditate_string = " and meditates by " + yogatype;
         }
 
         //img
         ImageView emotion = (ImageView) findViewById(R.id.imageView);
+        Spinner moodSpinner = (Spinner)findViewById(R.id.spinner);
+        String moodText = String.valueOf(moodSpinner.getSelectedItem());
         int image;
 
         if(moodText.equals("happy")){
@@ -93,7 +93,9 @@ public class MainActivity extends AppCompatActivity { //controller view in iOS
         }
         emotion.setImageResource(image);
         //update mood textview
-        feeling.setText("I am a " + checkbox_string + " person, in a " + moodText + meditate_string);
+        TextView feeling = (TextView)findViewById(R.id.feelingText);
+        feeling.setText("I am a " + checkbox_string1 + checkbox_string2 + checkbox_string3 + checkbox_string4
+                + " person, in a " + moodText + " mood " + meditate_string);
 
     }
 
