@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">lab10</string>
+    <string name="app_name">Coffee</string>
 
     <string name="title">Coffee Shop Finder</string>
     <string name="subtitle">Choose your crowd</string>
@@ -8,6 +8,10 @@
         <item>Hippie</item>
         <item>Office Worker</item>
         <item>Atheletes</item>
+        <item>Poetry</item>
+        <item>Popular</item>
     </string-array>
     <string name="button">Find!</string>
+    <string name="coffee_img">coffee cup</string>
+    <string name="suggested_coffee">This is your suggested coffee shop</string>
 </resources>
