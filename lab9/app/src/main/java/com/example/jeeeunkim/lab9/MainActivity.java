@@ -3,6 +3,7 @@ package com.example.jeeeunkim.lab9;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+//import android.R;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -61,22 +62,22 @@ public class MainActivity extends AppCompatActivity { //controller view in iOS
         int image;
 
         if(moodText.equals("happy")){
-
+            image = R.drawable.happy;
         } else if(moodText.equals("gloomy")){
-            image = R.drawable.feeling1;
+            image = R.drawable.gloomy;
         } else if(moodText.equals("creepy")){
-            image = R.drawable.feeling1;
+            image = R.drawable.creepy;
         } else if(moodText.equals("depressed")){
-            image = R.drawable.feeling1;
+            image = R.drawable.depressed;
         } else if(moodText.equals("confused")){
-            image = R.drawable.feeling1;
+            image = R.drawable.confused;
         } else if(moodText.equals("sad")){
-            image = R.drawable.feeling1;
-        } else if(moodText.equals("confused")){
-            image = R.drawable.feeling1;
+            image = R.drawable.sad;
         } else {
+            image = R.drawable.happy;
             System.out.println("This cannot happened");
         }
+        emotion.setImageResource(image);
     }
 
     @Override
