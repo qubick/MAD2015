@@ -1,5 +1,6 @@
 package com.example.jeeeunkim.lab10;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -27,5 +28,15 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(suggestedCoffeeShop);
         System.out.println(suggestedCoffeeShopURL);
 
+        //create a new intent
+        Intent intent = new Intent(this, ReceiveCoffeeActivity.class);
+
+        //pass data
+        intent.putExtra("coffeeShopName", suggestedCoffeeShop);
+        intent.putExtra("coffeeShopURL", suggestedCoffeeShopURL);
+        intent.putExtra("coffeeshopImg", suggestedCoffeeShopImg);
+
+        //start the intent
+        startActivity(intent);
     }
 }
