@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         //pass data
         intent.putExtra("coffeeShopName", suggestedCoffeeShop);
         intent.putExtra("coffeeShopURL", suggestedCoffeeShopURL);
-        intent.putExtra("coffeeshopImg", suggestedCoffeeShopImg);
+        intent.putExtra("coffeeShopImg", suggestedCoffeeShopImg);
 
         //start the intent
         startActivity(intent);

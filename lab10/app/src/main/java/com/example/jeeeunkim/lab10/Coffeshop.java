@@ -12,7 +12,7 @@ public class Coffeshop {
         switch (coffeeCrowd){
             case "College":
                 coffeeShop = "Trident";
-                coffeeShopURL="http://tridentcafe.comm";
+                coffeeShopURL="http://tridentcafe.com";
                 image = R.drawable.trident;
                 break;
             case "Hippie":
