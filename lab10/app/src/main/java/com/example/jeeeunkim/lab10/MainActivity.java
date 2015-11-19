@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(suggestedCoffeeShop);
         System.out.println(suggestedCoffeeShopURL);
 
+        //get spinner data
+        //update image according to the crowd
+
+
         //create a new intent
         Intent intent = new Intent(this, ReceiveCoffeeActivity.class);
 
