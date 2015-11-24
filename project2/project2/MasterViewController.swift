@@ -31,6 +31,7 @@ class MasterViewController: UITableViewController {
         insertNewObject(addButton)
         insertNewObject(addButton)
         insertNewObject(addButton)
+        insertNewObject(addButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +54,11 @@ class MasterViewController: UITableViewController {
             count++
         } else if count == 2 {
             objects.insert("Memory (Cats OST)", atIndex: 0)
+            let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            count++
+        } else if count == 3 {
+            objects.insert("Test", atIndex: 0)
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             count++

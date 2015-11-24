@@ -8,9 +8,10 @@
 
 import UIKit
 import AVFoundation
+import CoreBluetooth
 
 
-class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
+class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate { //CBCentralManagerDelegate, CBPeripheralDelegate {
 
     var audioPlayer: AVAudioPlayer?
     var audioRecorder: AVAudioRecorder?
@@ -36,6 +37,8 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     @IBOutlet weak var playMyMusic: UIButton!
     @IBOutlet weak var stopMyMusic: UIButton!
     @IBOutlet weak var recordMyMusic: UIButton!
+    
+    @IBOutlet weak var webView: UIWebView!
     
     func moveBar() {
         imgBar.center = CGPointMake(imgBar.center.x + delta.x, imgBar.center.y + delta.y)
@@ -124,6 +127,11 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     @IBAction func hitKey(sender: UIButton) {
     
         var audioFilePath = NSBundle.mainBundle().pathForResource("c4", ofType: "wav") //default
+        /*
+        if let text = sendTextField{
+            writeValue(sendTextField.text)
+        }
+        */
         
         switch sender.tag {
         case 0:
@@ -210,7 +218,45 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         }
 
     }
-
+    /*
+    //*** Bluetooth Connection *********************//
+    @IBOutlet weak var sendTextField: UITextField!
+    
+    func centralManagerDidUpdateState(central: CBCentralManager?) {
+        if let central = central{
+            if central.state == CBCentralManagerState.PoweredOn {
+                println("Bluetooth ON")
+            }
+            else {
+                // Can have different conditions for all states if needed - print generic message for now
+                println("Bluetooth switched off or not initialized")
+            }
+        }
+        
+    }
+    
+    // Get data values when they are updated
+    func peripheral(peripheral: CBPeripheral?, didUpdateValueForCharacteristic characteristic: CBCharacteristic?, error: NSError!) {
+        
+        if let characteristicValue = characteristic?.value{
+            var datastring = NSString(data: characteristicValue, encoding: NSUTF8StringEncoding)
+            if let datastring = datastring{
+                navigationItem.title = datastring as String
+            }
+        }
+    }
+    
+    // Write function
+    func writeValue(data: String){
+        let data = (data as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        if let peripheralDevice = peripheralDevice{
+            if let deviceCharacteristics = deviceCharacteristics{
+                peripheralDevice.writeValue(data, forCharacteristic: deviceCharacteristics, type: CBCharacteristicWriteType.WithoutResponse)
+            }
+        }
+    }
+    */
+    
     override func viewDidLoad() {
         
         //listenOriginal.enabled = false
@@ -220,12 +266,21 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         
         switch (index) {
             case 0:
+                
+                if let label = detailDescriptionLabel {
+                    detailDescriptionLabel.text = "Test"
+                }
+                imgNoteLine.hidden = true
+
+            
+            case 1:
                 if let label = detailDescriptionLabel {
                     detailDescriptionLabel.text = "Memory (Cats OST)"
                 }
                 
                 imgNoteLine.image = UIImage(named: "memory1") //set 1st line as default
-            
+                webView.hidden = true
+                
                 for i in 1...6 {
                     var imgTitle = "memory\(i)"
                     var image = UIImage(named: imgTitle)
@@ -233,20 +288,21 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
                     
                     println(imgTitle)
                 }
-            
+                
                 songTitle = "memory"
                 cnt = 6
                 time = 62 //musical note line swipe interval
-            
+                
                 //let salutFilePath = docDir.stringByAppendingPathComponent("salut.mp3")
                 //let salutFileURL = NSURL(fileURLWithPath: salutFilePath)
             
-            case 1:
+            case 2:
                 if let label = detailDescriptionLabel {
                     detailDescriptionLabel.text = "Aux Champs-Elyeese"
                 }
                 
                 imgNoteLine.image = UIImage(named: "champs1")
+                webView.hidden = true
                 
                 for i in 1...5 {
                     var imgTitle = "champs\(i)"
@@ -260,24 +316,27 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
                 cnt = 5
                 time = 50 //musical note line swipe interval
                 println(time)
-            case 2:
+            
+            case 3:
+                
                 if let label = detailDescriptionLabel {
                     detailDescriptionLabel.text = "Salut Da'mour"
                 }
                 
                 imgNoteLine.image = UIImage(named: "salut1")
+                webView.hidden = true
                 
                 for i in 1...8 {
                     var imgTitle = "salut\(i)"
                     var image = UIImage(named: imgTitle)
                     noteImgSet.addObject(image!)
                     
-                    
                     println(imgTitle)
                 }
                 songTitle = "salut"
                 cnt = 8
                 time = 80
+
             default:
                 println("this case should not happen")
         }
