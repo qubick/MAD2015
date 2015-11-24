@@ -133,11 +133,22 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         }
         */
         
+        var tune = Dictionary<String, String>()
+        
         switch sender.tag {
         case 0:
              audioFilePath = NSBundle.mainBundle().pathForResource("c4", ofType: "wav")
+             
+            tune = [
+                "name":"c4",
+                "tag":"one"
+             ]
         case 1:
              audioFilePath = NSBundle.mainBundle().pathForResource("c-4", ofType: "wav")
+             tune = [
+                "name":"c4",
+                "tag":"one"
+            ]
         case 2:
              audioFilePath = NSBundle.mainBundle().pathForResource("d4", ofType: "wav")
         case 3:
@@ -191,6 +202,8 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
             
         }
         
+        post(tune, url: "http://localhost:8080")
+        
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
         audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error:nil)
@@ -207,6 +220,55 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
             self.configureView()
         }
     }
+    
+    func post(params : Dictionary<String, String>, url : String) {
+        var request = NSMutableURLRequest(URL: NSURL(string: url)!)
+        var session = NSURLSession.sharedSession()
+        request.HTTPMethod = "POST"
+        
+        var err: NSError?
+        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        
+        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            println("Response: \(response)")
+            
+            
+            //data from server
+            var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println("Body: \(strData)")
+            
+            var err: NSError?
+            var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
+            
+            // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
+            if(err != nil) {
+                println(err!.localizedDescription)
+                let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                println("Error could not parse JSON: '\(jsonStr)'")
+            }
+            else {
+                // The JSONObjectWithData constructor didn't return an error. But, we should still
+                // check and make sure that json has a value using optional binding.
+                if let parseJSON = json {
+                    // Okay, the parsedJSON is here, let's get the value for 'success' out of it
+                    var success = parseJSON["success"] as? Int
+                    println("Succes: \(success)")
+                }
+                else {
+                    // json object was nil, something went worng. Maybe the server isn't running?
+                    let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                    println("Error could not parse JSON: \(jsonStr)")
+                }
+            }
+        })
+        
+        task.resume()
+    }
+    
+    
 
     func configureView() {
         // Update the user interface for the detail item.
@@ -272,6 +334,10 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
                 }
                 imgNoteLine.hidden = true
 
+                //connect & load local host server
+                let url = NSURL (string: "http://localhost:8080");
+                let requestObj = NSURLRequest(URL: url!);
+                webView.loadRequest(requestObj);
             
             case 1:
                 if let label = detailDescriptionLabel {
