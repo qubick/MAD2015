@@ -14,7 +14,6 @@
 		0E6A70B31BD5DAEB0042122F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6A70B11BD5DAEB0042122F /* Main.storyboard */; };
 		0E6A70B51BD5DAEB0042122F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6A70B41BD5DAEB0042122F /* Images.xcassets */; };
 		0E6A70B81BD5DAEB0042122F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6A70B61BD5DAEB0042122F /* LaunchScreen.xib */; };
-		0E6A70C41BD5DAEB0042122F /* project2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A70C31BD5DAEB0042122F /* project2Tests.swift */; };
 		0E6A70CE1BD5DF5F0042122F /* MyCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A70CD1BD5DF5F0042122F /* MyCustomButton.swift */; };
 		0E977DD51BD9E291002B9DAC /* b-5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E977DBC1BD9E291002B9DAC /* b-5.wav */; };
 		0E977DD61BD9E291002B9DAC /* b5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E977DBD1BD9E291002B9DAC /* b5.wav */; };
@@ -41,6 +40,7 @@
 		0E977DEB1BD9E291002B9DAC /* d4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E977DD21BD9E291002B9DAC /* d4.wav */; };
 		0E977DEC1BD9E291002B9DAC /* c-4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E977DD31BD9E291002B9DAC /* c-4.wav */; };
 		0E977DED1BD9E291002B9DAC /* c4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E977DD41BD9E291002B9DAC /* c4.wav */; };
+		0EF7B4241BFA81FB007E3AFC /* project2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A70C31BD5DAEB0042122F /* project2Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -333,7 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E6A70C41BD5DAEB0042122F /* project2Tests.swift in Sources */,
+				0EF7B4241BFA81FB007E3AFC /* project2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = project2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -463,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = project2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

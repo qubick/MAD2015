@@ -239,11 +239,12 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
             //data from server
             var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
             println("Body: \(strData)")
+            //println("data got: \(data)")
             
             var err: NSError?
             var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
             
-            // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
+            // if JSONObjectWithData constructor return an error? log the error
             if(err != nil) {
                 println(err!.localizedDescription)
                 let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
