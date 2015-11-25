@@ -11,15 +11,17 @@ function handleRequest(req, res){
 		
 			var msg = {"msg":"data received",
 						"ack":data.toString()}
-			var body = ''
+			var body = JSON.parse(data)
+			var tag = parseInt(body.tag)
 
 			if(res.write(JSON.stringify(msg)))
 				console.log("got worked")
 			
-			body += data
+			//body += data
 
 			console.log('Received data: ',data.toString())
-			res.end() //write to client
+			console.log('tag: ', typeof(tag), tag)
+			res.end() //end the request for next listening
 		})
 	}
 //	res.end()
