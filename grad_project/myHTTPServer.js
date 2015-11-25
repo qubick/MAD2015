@@ -6,19 +6,21 @@ function handleRequest(req, res){
 
 	console.log(req.method)
 	if(req.method == "POST"){
-		var data = {"msg":"yes"}
-		var body = ''
-
-		if(res.write(JSON.stringify(data)))
-			console.log("got worked")
 
 		req.on('data', function(data){
+		
+			var msg = {"msg":"data received",
+						"ack":"ok"}
+			var body = ''
+
+			if(res.write(JSON.stringify(msg)))
+				console.log("got worked")
 			body += data
-			console.log('data: ',data.toString())
+			console.log('Received data: ',data.toString())
 		})
 	}
-	//res.end('It Works! Path Hit: ', + req)
-	res.end()
+//	res.end('It Works! Path Hit: ', + req)
+//	res.end()
 }
 
 var server = http.createServer(handleRequest)
