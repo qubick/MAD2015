@@ -18,7 +18,7 @@ public class Coffeshop {
             case "Hippie":
                 coffeeShop = "Sip Coffee";
                 coffeeShopURL = "http://sipboulder.com";
-                image = R.drawable.trident;
+                image = R.drawable.sip;
                 break;
             case "Office Worker":
                 coffeeShop = "OZO";
@@ -40,7 +40,7 @@ public class Coffeshop {
                 coffeeShopURL = "http://amantecoffee.com";
                 image = R.drawable.amante;
                 break;
-            case "popular":
+            case "Popular":
                 coffeeShop = "Starbucks";
                 coffeeShopURL = "http://starbucks.com";
                 image = R.drawable.starbucks;
