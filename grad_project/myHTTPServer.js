@@ -1,8 +1,7 @@
 var http =  require('http')
 const PORT = 8080;
 
-//Serial comm with Arduino
-
+//settings for Serial communication with Arduino
 var interval
 	,portName = '/dev/cu.usbmodem1421'
 	,SerialPort = require("serialport").SerialPort
@@ -59,9 +58,10 @@ function handleRequest(req, res){
 
 			//res.send(serialListner)
 			
-			serialPort.write('0x01', function(err, results){
-				console.log('err: ' + err)
-				console.log('results: ' + results)
+			serialPort.write(tag, function(err, results){
+				if(err)
+					console.log('err: ' + err)
+				console.log('Respond data from Arduino: ' + results)
 			});
 
 			res.end() //end the request for next listening
@@ -72,10 +72,10 @@ function handleRequest(req, res){
 	
 	interval = setInterval(function(){
 
-					board.digitalWrite(ledPin, (ledState = ledState === arduino.LOW && arduino.HIGH || arduino.LOW) );
-				    console.log("LedState "+ (ledState === 0 ? 'OFF' : 'ON') );
+		board.digitalWrite(ledPin, (ledState = ledState === arduino.LOW && arduino.HIGH || arduino.LOW) );
+		console.log("LedState "+ (ledState === 0 ? 'OFF' : 'ON') );
 
-					   }, 500); 
+	}, 500); 
 */
 		}) //res.on()
 	}
