@@ -55,7 +55,7 @@ void loop() {
     } else if (incomingByte >100 && incomingByte <= 200) {
       digitalWrite(LEDGreen, HIGH);  
     }
-    //delay(500);
+    delay(500);
     digitalWrite(outputPin, LOW); 
     digitalWrite(LEDGreen, LOW);
   }
