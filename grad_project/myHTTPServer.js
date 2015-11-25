@@ -12,8 +12,8 @@ var arduino = require('arduino')
 
 var SerialPort = require("serialport").SerialPort
 
-function serialListener()
-{
+//function serialListener()
+//{
 	var receivedData = ""
 		,serialPort = new SerialPort(portName, {
 			    baudrate: 9600,
@@ -24,10 +24,10 @@ function serialListener()
 		  	     flowControl: false 
 	});
 	serialPort.on("open", function () {
-	console.log('open serial communication');
-	// Listens to incoming data
+		console.log('open serial communication');
 	
-	serialPort.on('data', function(data) { 
+		// Listens to incoming data
+		serialPort.on('data', function(data) { 
 		receivedData += data.toString();
 		
 		if (receivedData .indexOf('E') >= 0 && receivedData .indexOf('B') >= 0) {
@@ -43,7 +43,7 @@ function serialListener()
 		
 		});  	
 	});  
-}
+//}
 
 function handleRequest(req, res){
 
@@ -64,10 +64,16 @@ function handleRequest(req, res){
 			console.log('Received data: ',data.toString())
 			console.log('tag: ', typeof(tag), tag)
 
-			//res.send(serialListner)
+			/*res.send(serialListner)
 			socket.on('led', function(data){
 				serialPort.write('0x00')
 			})
+			*/
+			serialPort.write('0x01', function(err, results){
+				console.log('err: ' + err)
+				console.log('results: ' + results)
+			});
+
 			res.end() //end the request for next listening
 
 /*
@@ -90,6 +96,6 @@ var server = http.createServer(handleRequest)
 
 server.listen(PORT, function(){
 	console.log("Server listening on: http://localhost: %s", PORT)	
-	serialListener()
+	//serialListener()
 })
 
