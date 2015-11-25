@@ -3,14 +3,9 @@ const PORT = 8080;
 
 //Serial comm with Arduino
 
-var arduino = require('arduino')
-	,board	= arduino.connect('/dev/cu.usbmodem1421')
-	,ledState = arduino.LOW
-	,ledPin = 13
-	,interval
+var interval
 	,portName = '/dev/cu.usbmodem1421'
-
-var SerialPort = require("serialport").SerialPort
+	,SerialPort = require("serialport").SerialPort
 
 //function serialListener()
 //{
@@ -33,9 +28,9 @@ var SerialPort = require("serialport").SerialPort
 		if (receivedData .indexOf('E') >= 0 && receivedData .indexOf('B') >= 0) {
 		
 			// save the data between 'B' and 'E'
-			sendData = receivedData .substring(receivedData .indexOf('B') + 1, receivedData .indexOf('E'));
-			
-			receivedData = '';
+			//sendData = receivedData .substring(receivedData .indexOf('B') + 1, receivedData .indexOf('E'));
+			sendData = '0x01'
+			receivedData = ''
 			
 			}
 			// send the incoming data to browser with websockets.
@@ -53,22 +48,17 @@ function handleRequest(req, res){
 		
 			var msg = {"msg":"data received",
 						"ack":data.toString()}
-			var body = JSON.parse(data)
-			var tag = parseInt(body.tag)
+				,body = JSON.parse(data)
+				,tag = parseInt(body.tag)
 
 			if(res.write(JSON.stringify(msg)))
 				console.log("got worked")
 			
-			//body += data
-
 			console.log('Received data: ',data.toString())
 			console.log('tag: ', typeof(tag), tag)
 
-			/*res.send(serialListner)
-			socket.on('led', function(data){
-				serialPort.write('0x00')
-			})
-			*/
+			//res.send(serialListner)
+			
 			serialPort.write('0x01', function(err, results){
 				console.log('err: ' + err)
 				console.log('results: ' + results)
