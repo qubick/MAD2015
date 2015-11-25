@@ -2,3 +2,4 @@
 apple_developer_*
 *.playground
 .DS_Store
+node_modules
