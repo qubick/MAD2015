@@ -1,3 +1,5 @@
+*/*.DS_Store
+*.swp
 apple_developer_*
 *.playground
 *.DS_Store
