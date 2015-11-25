@@ -47,14 +47,15 @@ void loop() {
   if(Serial.available() > 0){
     int incomingByte = Serial.read();
     digitalWrite(LEDGreen, HIGH);
+    myservo.write(incomingByte);
     
-    if(incomingByte){
-      myservo.write(incomingByte);
+    if(incomingByte>0 &&incomingByte <=100){
+      
       digitalWrite(outputPin, HIGH);
-    } else {
-      digitalWrite(outputPin, LOW);  
+    } else if (incomingByte >100 && incomingByte <= 200) {
+      digitalWrite(LEDGreen, HIGH);  
     }
-    delay(500);
+    //delay(500);
     digitalWrite(outputPin, LOW); 
     digitalWrite(LEDGreen, LOW);
   }

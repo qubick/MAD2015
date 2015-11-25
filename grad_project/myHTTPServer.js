@@ -3,7 +3,7 @@ const PORT = 8080;
 
 //settings for Serial communication with Arduino
 var interval
-	,portName = '/dev/cu.usbmodem1421'
+	,portName = '/dev/cu.usbmodem1411'
 	,SerialPort = require("serialport").SerialPort
 
 //function serialListener()
