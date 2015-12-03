@@ -61,6 +61,7 @@ function handleRequest(req, res){
 
 			
 			serialPort.write(tag, function(err, results){
+			//serialPort.write(tune, function(err, results){
 				if(err)
 					console.log('err: ' + err)
 				console.log('Respond data from Arduino: ' + results)
