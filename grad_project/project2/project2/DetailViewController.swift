@@ -141,157 +141,183 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
              
             tune = [
                 "name":"c4",
-                "tag":"0"
+                "tag":"0",
+                "tune":"c"
              ]
         case 1:
              audioFilePath = NSBundle.mainBundle().pathForResource("c-4", ofType: "wav")
              tune = [
                 "name":"c4 minor",
-                "tag":"1"
+                "tag":"1",
+                "tune":"c"
             ]
         case 2:
              audioFilePath = NSBundle.mainBundle().pathForResource("d4", ofType: "wav")
              tune = [
                 "name":"d4",
-                "tag":"2"
+                "tag":"2",
+                "tune":"d"
             ]
         case 3:
              audioFilePath = NSBundle.mainBundle().pathForResource("d-4", ofType: "wav")
              tune = [
                 "name":"d4 minor",
-                "tag":"3"
+                "tag":"3",
+                "tune":"d"
             ]
         case 4:
              audioFilePath = NSBundle.mainBundle().pathForResource("e4", ofType: "wav")
              tune = [
                 "name":"e4",
-                "tag":"4"
+                "tag":"4",
+                "tune":"e"
             ]
         case 5:
              audioFilePath = NSBundle.mainBundle().pathForResource("f4", ofType: "wav")
              tune = [
                 "name":"f4",
-                "tag":"5"
+                "tag":"5",
+                "tune":"f"
             ]
         case 6:
              audioFilePath = NSBundle.mainBundle().pathForResource("f-4", ofType: "wav")
              tune = [
                 "name":"f4 minor",
-                "tag":"6"
+                "tag":"6",
+                "tune":"f"
             ]
         case 7:
              audioFilePath = NSBundle.mainBundle().pathForResource("g4", ofType: "wav")
              tune = [
                 "name":"g4",
-                "tag":"7"
+                "tag":"7",
+                "tune":"g"
             ]
         case 8:
              audioFilePath = NSBundle.mainBundle().pathForResource("g-4", ofType: "wav")
              tune = [
                 "name":"g4 minor",
-                "tag":"8"
+                "tag":"8",
+                "tune":"g"
             ]
         case 9:
              audioFilePath = NSBundle.mainBundle().pathForResource("a4", ofType: "wav")
              tune = [
                 "name":"a4",
-                "tag":"9"
+                "tag":"9",
+                "tune":"a"
             ]
         case 10:
              audioFilePath = NSBundle.mainBundle().pathForResource("a-4", ofType: "wav")
              tune = [
                 "name":"a4 minor",
-                "tag":"10"
+                "tag":"10",
+                "tune":"a"
             ]
         case 11:
              audioFilePath = NSBundle.mainBundle().pathForResource("b4", ofType: "wav")
              tune = [
                 "name":"b4",
-                "tag":"11"
+                "tag":"11",
+                "tune":"b"
             ]
         case 12:
              audioFilePath = NSBundle.mainBundle().pathForResource("c5", ofType: "wav")
              tune = [
                 "name":"c5",
-                "tag":"12"
+                "tag":"12",
+                "tune":"c"
             ]
         case 13:
              audioFilePath = NSBundle.mainBundle().pathForResource("c-5", ofType: "wav")
              tune = [
                 "name":"c5 minor",
-                "tag":"13"
+                "tag":"13",
+                "tune":"c"
             ]
         case 14:
              audioFilePath = NSBundle.mainBundle().pathForResource("d5", ofType: "wav")
              tune = [
                 "name":"d5",
-                "tag":"14"
+                "tag":"14",
+                "tune":"d"
             ]
         case 15:
              audioFilePath = NSBundle.mainBundle().pathForResource("d-5", ofType: "wav")
              tune = [
                 "name":"d5 minor",
-                "tag":"15"
+                "tag":"15",
+                "tune":"d"
             ]
         case 16:
              audioFilePath = NSBundle.mainBundle().pathForResource("e5", ofType: "wav")
              tune = [
                 "name":"e5",
-                "tag":"16"
+                "tag":"16",
+                "tune":"e"
             ]
         case 17:
              audioFilePath = NSBundle.mainBundle().pathForResource("f5", ofType: "wav")
              tune = [
                 "name":"f5",
-                "tag":"17"
+                "tag":"17",
+                "tune":"f"
             ]
         case 18:
             audioFilePath = NSBundle.mainBundle().pathForResource("f-5", ofType: "wav")
             tune = [
                 "name":"f5 minor",
-                "tag":"18"
+                "tag":"18",
+                "tune":"f"
             ]
         case 19:
              audioFilePath = NSBundle.mainBundle().pathForResource("g5", ofType: "wav")
              tune = [
                 "name":"g5",
-                "tag":"19"
+                "tag":"19",
+                "tune":"g"
             ]
         case 20:
              audioFilePath = NSBundle.mainBundle().pathForResource("g-5", ofType: "wav")
              tune = [
                 "name":"g5 minor",
-                "tag":"20"
+                "tag":"20",
+                "tune":"g"
             ]
         case 21:
              audioFilePath = NSBundle.mainBundle().pathForResource("a5", ofType: "wav")
              tune = [
                 "name":"a5",
-                "tag":"21"
+                "tag":"21",
+                "tune":"a"
             ]
         case 22:
              audioFilePath = NSBundle.mainBundle().pathForResource("a-5", ofType: "wav")
              tune = [
                 "name":"a5 minor",
-                "tag":"22"
+                "tag":"22",
+                "tune":"a"
             ]
         case 23:
              audioFilePath = NSBundle.mainBundle().pathForResource("b5", ofType: "wav")
              tune = [
                 "name":"b5",
-                "tag":"23"
+                "tag":"23",
+                "tune":"b"
             ]
         case 24:
              audioFilePath = NSBundle.mainBundle().pathForResource("c4", ofType: "wav")
              tune = [
                 "name":"c6",
-                "tag":"24"
+                "tag":"24",
+                "tune":"c"
             ]
         case 25:
              audioFilePath = NSBundle.mainBundle().pathForResource("c-4", ofType: "wav")
              tune = [
                 "name":"c4 minor",
-                "tag":"25"
+                "tag":"25",
+                "tune":"c"
             ]
         default:
             println("this should not happe")
