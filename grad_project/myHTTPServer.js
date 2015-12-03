@@ -4,6 +4,7 @@ const PORT = 8080;
 //settings for Serial communication with Arduino
 var interval
 	,portName = '/dev/cu.usbmodem1411'
+//	,portName = '/dev/cu.usbserial-DA011PDK'
 	,SerialPort = require("serialport").SerialPort
 
 //function serialListener()
@@ -23,7 +24,7 @@ var interval
 		// Listens to incoming data
 		serialPort.on('data', function(data) { 
 		receivedData += data.toString();
-		
+	/*	
 		if (receivedData .indexOf('E') >= 0 && receivedData .indexOf('B') >= 0) {
 		
 			// save the data between 'B' and 'E'
@@ -34,7 +35,7 @@ var interval
 			}
 			// send the incoming data to browser with websockets.
 			socketServer.emit('update', sendData);
-		
+		*/
 		});  	
 	});  
 //}
@@ -49,14 +50,15 @@ function handleRequest(req, res){
 						"ack":data.toString()}
 				,body = JSON.parse(data)
 				,tag = parseInt(body.tag)
+				,tune = body.tune
 
 			if(res.write(JSON.stringify(msg)))
 				console.log("got worked")
 			
 			console.log('Received data: ',data.toString())
 			console.log('tag: ', typeof(tag), tag)
+			console.log('tune: ', typeof(tune), tune)
 
-			//res.send(serialListner)
 			
 			serialPort.write(tag, function(err, results){
 				if(err)
