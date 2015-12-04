@@ -1,51 +1,31 @@
-#include <Servo.h>
 #include <SoftwareSerial.h>
 
-int LEDYellow = 3;
-int LEDGreen = 4;
-int LEDRed= 5;
-
+int notes[] = {3,4,6,8,9};
+int integerValue = 0;
+byte incomingByte = 0;
 const int outputPin = 13;
 
-Servo myservo;
-SoftwareSerial BLE(0,1); //create instance of BLE with pin 0(RX), 1(TX)
-
-int integerValue = 0;
-
-
 void setup() {
-  // put your setup code here, to run once:
+  //initialize
+  for (int i = 0; i < 5; i++){
+    pinMode(notes[i], OUTPUT);
+  }
+
   pinMode(outputPin, OUTPUT);
-
-  
-  pinMode(LEDYellow, OUTPUT);
-  pinMode(LEDGreen, OUTPUT);
-  pinMode(LEDRed, OUTPUT);
-
-  myservo.attach(9);
-  myservo.write(0);
-
   Serial.begin(9600);
-//  Serial1.begin(4800);
-  //BLE.begin(9600);
+  testloop();
+
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  
-  digitalWrite(LEDYellow, LOW);
-  digitalWrite(LEDRed, LOW);
-  digitalWrite(LEDGreen, LOW);
 
+//testloop();
 
+//read serial input from app and trigger solenoids//
   if(Serial.available() > 0){
-    
-    digitalWrite(LEDGreen, HIGH);
-//    myservo.write(incomingByte);
 
-    integerValue = 0;
     while(1){
-      int incomingByte = Serial.read();
+      incomingByte = Serial.read();
       if(incomingByte == '\n') break;
       if(incomingByte == -1) continue;
 
@@ -53,20 +33,45 @@ void loop() {
 
       //convert ASCII to integer
       integerValue = ((incomingByte - 48) + integerValue);
-      myservo.write(integerValue);
+      Serial.println(integerValue, DEC);
      }
-    //Serial.println(incomingByte, DEC);
-/*    
-    if(incomingByte>0 &&incomingByte <=100){
-      
-      digitalWrite(outputPin, HIGH);
-    } else if (incomingByte >100 && incomingByte <= 200) {
-      digitalWrite(LEDGreen, HIGH);  
+  switch ((int)incomingByte) {
+    case 'a':
+      digitalWrite(notes[0], HIGH);
+      break;
+    case 'b':
+      digitalWrite(notes[1], HIGH);
+      break;
+    case 'c':
+      digitalWrite(notes[2], HIGH);
+      break;
+    case 17:
+      digitalWrite(notes[3], HIGH);
+      break;
+    case 19:
+      digitalWrite(notes[4], HIGH);
+      break;
+    default: 
+      for (int i = 0; i <5; i++){
+        digitalWrite(notes[i], LOW);
+      }
     }
-    */
-    
-    delay(500);
-    digitalWrite(outputPin, LOW); 
-    digitalWrite(LEDGreen, LOW);
   }
+delay(100);
+
+//int incomingByte = Serial.read();
+Serial.println(incomingByte);
+delay(100);
+
 }
+
+void testloop(){
+//test loop - run to check that all solenoids are firing//
+for (int i=0; i < 5; i++){
+  digitalWrite(notes[i], HIGH);
+  delay(100);
+  digitalWrite(notes[i],LOW);
+}
+
+}
+
