@@ -168,7 +168,7 @@
             android:layout_height="wrap_content"
             android:text="Find Pizza Place"
             android:id="@+id/find"
-            android:onClick="loadWebsite"
+            android:onClick="loadWebSite"
             android:layout_gravity="right" />
 
     </LinearLayout>
