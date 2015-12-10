@@ -1,5 +1,7 @@
 package com.example.jeeeunkim.finalpizza;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,6 +14,8 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
+
+    private String url = "http://localeboulder.com/";
 
     public void buildPizza(View view){
 
@@ -32,9 +36,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.thin:
                 crusttype=" thin";
+                url = "http://localeboulder.com/";
                 break;
             case R.id.thick:
                 crusttype=" thick";
+                url = "http://www.oldchicago.com/";
                 break;
             default:
                 crusttype=" classic basic";
@@ -77,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         boolean glutenfree = glutenfree_switch.isChecked();
         if(glutenfree){
             glutenfree_string = " glutenfree";
+            url = "http://beaujos.com/";
         }
 
         int image;
@@ -103,6 +110,15 @@ public class MainActivity extends AppCompatActivity {
                         " sauce and toppings of" +
                         checkbox_string1 + checkbox_string2 + checkbox_string3 + checkbox_string4
                );
+
+        //loadWebSite(url);
+    }
+
+    //load implicit activity intent
+    public void loadWebSite(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
     }
 
     @Override
