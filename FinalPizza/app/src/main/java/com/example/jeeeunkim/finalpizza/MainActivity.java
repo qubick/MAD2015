@@ -9,6 +9,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
 
         TextView pizzaTitle = (TextView)findViewById(R.id.pizzaName);
         String pizza_string = pizzaTitle.getText().toString();
+
+
+        ToggleButton toggleBtn = (ToggleButton)findViewById(R.id.toggle);
+        String sauce_string = toggleBtn.getText().toString();
 
         String crusttype = "";
         RadioGroup crust = (RadioGroup) findViewById(R.id.radioCrust);
@@ -94,7 +99,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         TextView feeling = (TextView)findViewById(R.id.pizzaExplanation);
-        feeling.setText(pizza_string + " is a " + sizeText + " sized" + crusttype + glutenfree_string + " pizza with tooppings of" +
+        feeling.setText(pizza_string + " is a " + sizeText + " sized" + crusttype + glutenfree_string + " pizza with " + sauce_string +
+                        " sauce and toppings of" +
                         checkbox_string1 + checkbox_string2 + checkbox_string3 + checkbox_string4
                );
     }
