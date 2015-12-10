@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">FinalPizza</string>
+
+    <string name="pizzaName">Mountain</string>
+
+    <string-array name="size">
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item>
+    </string-array>
+
+    <string name="thin">thin</string>
+    <string name="thick">thick</string>
+
+    <string name="pepperoni">pepperoni</string>
+    <string name="mushroom">mushroom</string>
+    <string name="onions">onions</string>
+    <string name="sausage">sausage</string>
+
+</resources>
