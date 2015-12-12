@@ -324,7 +324,10 @@ class DetailViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
             
         }
         
-        post(tune, url: "http://localhost:8080")
+        //post(tune, url: "http://localhost:8080")
+        //for internal local host
+        //see System preference -> Network -> new IP
+        post(tune, url: "http://10.203.84.90:8080")
         
         let fileURL = NSURL(fileURLWithPath: audioFilePath!)
         
