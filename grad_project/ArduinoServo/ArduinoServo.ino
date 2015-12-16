@@ -32,7 +32,7 @@ void loop() {
       integerValue *= 10;
 
       //convert ASCII to integer
-      integerValue = ((incomingByte - 48) + integerValue);
+      //integerValue = ((incomingByte - 48) + integerValue);
       Serial.println(integerValue, DEC);
      }
   switch ((int)incomingByte) {
@@ -69,7 +69,7 @@ void testloop(){
 //test loop - run to check that all solenoids are firing//
 for (int i=0; i < 5; i++){
   digitalWrite(notes[i], HIGH);
-  delay(100);
+  delay(500);
   digitalWrite(notes[i],LOW);
 }
 
