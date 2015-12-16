@@ -3,7 +3,7 @@ const PORT = 8080;
 
 //settings for Serial communication with Arduino
 var interval
-	,portName = '/dev/cu.usbmodem1411'
+	,portName = '/dev/cu.usbmodem1421'
 //	,portName = '/dev/cu.usbserial-DA011PDK'
 	,SerialPort = require("serialport").SerialPort
 
@@ -20,29 +20,34 @@ var interval
 	});
 	serialPort.on("open", function () {
 		console.log('open serial communication');
-	
+
 		// Listens to incoming data
 		serialPort.on('data', function(data) { 
-		receivedData += data.toString();
-	/*	
+			receivedData += data.toString();
+
 		if (receivedData .indexOf('E') >= 0 && receivedData .indexOf('B') >= 0) {
 		
 			// save the data between 'B' and 'E'
-			//sendData = receivedData .substring(receivedData .indexOf('B') + 1, receivedData .indexOf('E'));
+			sendData = receivedData .substring(receivedData .indexOf('B') + 1, receivedData .indexOf('E'));
 			sendData = '0x01'
 			receivedData = ''
 			
 			}
 			// send the incoming data to browser with websockets.
-			socketServer.emit('update', sendData);
-		*/
-		});  	
+		//	socketServer.emit('update', sendData);
+
+		
+		
+		});
 	});  
 //}
 
 function handleRequest(req, res){
 
 	console.log(req.method)
+	if(req.method == "GET"){
+		res.write('Success on accessing to the server')
+	}
 	if(req.method == "POST"){
 		req.on('data', function(data){
 		
@@ -67,19 +72,8 @@ function handleRequest(req, res){
 				console.log('Respond data from Arduino: ' + results)
 			});
 
-			res.end() //end the request for next listening
+			res.end('got message') //end the request for next listening
 
-/*
-	board.pinMode(ledPin, arduino.OUTPUT)
-	board.pinMode(ledPin, ledState) //arduino.LOW
-	
-	interval = setInterval(function(){
-
-		board.digitalWrite(ledPin, (ledState = ledState === arduino.LOW && arduino.HIGH || arduino.LOW) );
-		console.log("LedState "+ (ledState === 0 ? 'OFF' : 'ON') );
-
-	}, 500); 
-*/
 		}) //res.on()
 	}
 //	res.end()
