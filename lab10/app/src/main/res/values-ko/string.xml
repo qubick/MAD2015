@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">커피샵</string>
+
+    <string name="title">커피전문점 검색</string>
+    <string name="subtitle">동료 찾기</string>
+    <string-array name="crowds">
+        <item>대학생</item>
+        <item>히피</item>
+        <item>회사원</item>
+        <item>운동선수</item>
+        <item>시인</item>
+        <item>유명</item>
+    </string-array>
+    <string name="button">검색</string>
+    <string name="coffee_img">커피잔</string>
+    <string name="suggested_coffee">커피전문점 추천</string>
+</resources>
